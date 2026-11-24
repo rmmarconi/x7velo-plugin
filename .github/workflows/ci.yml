@@ -1,0 +1,76 @@
+# CI for the public x7velo-plugin mirror. GitHub-hosted runners ONLY: this repo is public and
+# anyone can open a pull request, so it must never target a self-hosted runner.
+# Source of truth: plugin/.github-public/workflows/ci.yml in the upstream repo.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  WP_ENV_VERSION: "12.1.0"
+  NODE_VERSION: "24"
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+          tools: composer:v2
+          coverage: none
+      - run: composer validate --no-check-publish
+      - run: composer install --no-interaction --no-progress
+      - run: composer lint
+
+  js:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run lint:js
+      - run: npm run test:unit
+      - run: npm run build
+
+  phpunit:
+    name: phpunit (PHP 8.1, WP + WooCommerce latest)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      WP_ENV_PHP_VERSION: "8.1"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - run: npm install --global "@wordpress/env@${WP_ENV_VERSION}"
+      - run: wp-env start
+      - run: wp-env run tests-cli --env-cwd=wp-content/plugins/x7velo composer install --no-interaction --no-progress
+      - run: wp-env run tests-cli --env-cwd=wp-content/plugins/x7velo composer test
+      - run: wp-env run tests-cli --env-cwd=wp-content/plugins/x7velo composer test:no-wc
+      - name: debug.log on failure
+        if: failure()
+        run: wp-env run tests-cli tail -n 200 wp-content/debug.log || true

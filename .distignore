@@ -1,0 +1,29 @@
+# Excluded from the distributable plugin zip.
+/.git
+/.github
+/.wordpress-org
+/node_modules
+/tests
+/.distignore
+/.gitignore
+/.gitkeep
+/.editorconfig
+/.wp-env.json
+/.wp-env.override.json
+/phpcs.xml
+/phpcs.xml.dist
+/phpunit.xml
+/phpunit.xml.dist
+/.phpunit.result.cache
+/.phpcs-cache
+/composer.lock
+/package.json
+/package-lock.json
+/README.md
+/webpack.config.js
+/jest.config.js
+/eslint.config.cjs
+/assets/src/__tests__
+/bin
+# languages/ ships as is: x7velo.pot, *.po, *.mo and the JS translation *.json (WP.org allows them).
+/.github-public

@@ -1,0 +1,2618 @@
+# Copyright (C) 2026 x7velo
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: x7velo 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/x7velo/\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-23T15:09:06+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: x7velo\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: x7velo.php
+msgid "x7velo"
+msgstr ""
+
+#. Description of the plugin
+#: x7velo.php
+msgid "Shoppers ask AI what to buy. See how easily AI assistants can read your store or site, and fix common problems. Free, private, no account."
+msgstr ""
+
+#. Author URI of the plugin
+#: x7velo.php
+msgid "https://x7velo.com"
+msgstr ""
+
+#: src/Admin/AdminPage.php:75
+#: src/Admin/AdminPage.php:76
+#: src/Admin/AdminPage.php:273
+msgid "AI Readiness"
+msgstr ""
+
+#: src/Admin/AdminPage.php:108
+msgid "Open AI Readiness"
+msgstr ""
+
+#: src/Admin/AdminPage.php:269
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+#: src/Admin/AdminPage.php:274
+msgid "by x7velo"
+msgstr ""
+
+#: src/Admin/AdminPage.php:293
+msgid "An audit is already running, maybe from another tab or another admin. Reload this page in a moment to see the results."
+msgstr ""
+
+#. translators: %d: score from 0 to 100.
+#: src/Admin/AdminPage.php:301
+#, php-format
+msgid "Your AI readiness score is %d out of 100."
+msgstr ""
+
+#: src/Admin/AdminPage.php:307
+msgid "To see the details and fixes, use a browser with JavaScript turned on."
+msgstr ""
+
+#: src/Admin/AdminPage.php:309
+#: assets/src/components/App.js:277
+#: assets/src/components/Overview.js:60
+msgid "Checking your site…"
+msgstr ""
+
+#: src/Admin/AdminPage.php:310
+#: assets/src/components/Overview.js:66
+msgid "We’re looking at your settings and pages to see how easily AI assistants like ChatGPT and Perplexity can read your site."
+msgstr ""
+
+#: src/Admin/AdminPage.php:311
+#: assets/src/components/Overview.js:79
+msgid "This check runs on your own site. Nothing is sent anywhere, and nothing on your site is changed."
+msgstr ""
+
+#: src/Admin/AdminPage.php:313
+#: assets/src/components/App.js:278
+#: assets/src/components/Overview.js:61
+msgid "Checking your store…"
+msgstr ""
+
+#: src/Admin/AdminPage.php:314
+#: assets/src/components/Overview.js:70
+msgid "We’re looking at your settings and product details to see how easily AI assistants like ChatGPT and Perplexity can read your store."
+msgstr ""
+
+#: src/Admin/AdminPage.php:315
+#: assets/src/components/Overview.js:83
+msgid "This check runs on your own site. Nothing is sent anywhere, and nothing on your store is changed."
+msgstr ""
+
+#: src/Admin/AdminPage.php:322
+msgid "Run audit"
+msgstr ""
+
+#: src/Admin/AdminPage.php:334
+#: src/Rest/AuditController.php:89
+#: src/Rest/SettingsController.php:100
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#: src/Audit/CheckResult.php:133
+msgid "We couldn’t check this. Try running the audit again."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:204
+msgid "Your store is in a subfolder, so its robots.txt is managed by the main site. We can’t check it from here yet."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:206
+#: src/Audit/Checks/AiSearchCrawlers.php:246
+msgid "Your site asks every search engine and AI assistant to stay away (Settings → Reading). Fix that first; x7velo never uses robots.txt to undo it."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:208
+msgid "Your robots.txt rules block every AI shopping and search assistant from your store. You can still block AI training bots — the fix only lets shopping and search assistants in."
+msgstr ""
+
+#. translators: 1: comma-separated crawler names, 2: number of further crawlers.
+#: src/Audit/Checks/AiSearchCrawlers.php:215
+#: src/Audit/Checks/AiSearchCrawlers.php:255
+#, php-format
+msgid "%1$s and %2$d more"
+msgid_plural "%1$s and %2$d more"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: crawler names, e.g. "OAI-SearchBot, PerplexityBot".
+#: src/Audit/Checks/AiSearchCrawlers.php:219
+#, php-format
+msgid "Some AI assistants that recommend products are blocked from reading your store: %s. You can still block AI training bots — this only lets shopping and search assistants in."
+msgstr ""
+
+#. translators: %s: crawler names.
+#: src/Audit/Checks/AiSearchCrawlers.php:225
+#: src/Audit/Checks/AiSearchCrawlers.php:263
+#, php-format
+msgid "Your robots.txt asks %s not to visit; they may still visit when a user asks."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:230
+msgid "AI shopping assistants can read your store. You block AI training bots. That’s your choice and doesn’t affect your score."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:232
+msgid "AI shopping assistants can read your store."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:244
+msgid "Your site is in a subfolder, so its robots.txt is managed by the main site. We can’t check it from here yet."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:248
+msgid "Your robots.txt rules block every AI search assistant from your site. You can still block AI training bots — the fix only lets search assistants in."
+msgstr ""
+
+#. translators: %s: crawler names, e.g. "OAI-SearchBot, PerplexityBot".
+#: src/Audit/Checks/AiSearchCrawlers.php:258
+#, php-format
+msgid "Some AI search assistants are blocked: %s."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:259
+msgid "You can still block AI training bots — this only lets search assistants in."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:268
+msgid "AI search assistants can read your site. You block AI training bots. That’s your choice and doesn’t affect your score."
+msgstr ""
+
+#: src/Audit/Checks/AiSearchCrawlers.php:270
+msgid "AI search assistants can read your site."
+msgstr ""
+
+#: src/Audit/Checks/ComingSoon.php:77
+msgid "Your store is in “Coming soon” mode, so shoppers, search engines and AI assistants see a placeholder instead of your products. You see the normal store only because you’re logged in. Set it to “Live” in WooCommerce → Settings → Site visibility."
+msgstr ""
+
+#: src/Audit/Checks/ComingSoon.php:79
+msgid "Your store is live, so shoppers, search engines and AI assistants can see it."
+msgstr ""
+
+#: src/Audit/Checks/GuestCheckout.php:62
+msgid "Shoppers (and assistants acting for them) must create an account to buy. Allowing guest checkout removes a step. You can change this in WooCommerce → Settings → Accounts & Privacy."
+msgstr ""
+
+#: src/Audit/Checks/GuestCheckout.php:64
+msgid "Shoppers can buy without creating an account."
+msgstr ""
+
+#: src/Audit/Checks/Https.php:71
+msgid "Your site address starts with http://, not https://. Many assistants and browsers treat that as unsafe. Ask your host to turn on a free SSL certificate."
+msgstr ""
+
+#: src/Audit/Checks/Https.php:73
+msgid "Your site address uses https://."
+msgstr ""
+
+#: src/Audit/Checks/Https.php:76
+msgid "Your store address starts with http://, not https://. Many assistants and browsers treat that as unsafe. Ask your host to turn on a free SSL certificate."
+msgstr ""
+
+#: src/Audit/Checks/Https.php:78
+msgid "Your store address uses https://."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Audit/Checks/LlmsTxt.php:161
+#, php-format
+msgid "You don’t have an llms.txt file. %s can create one for you: turn it on in its settings. x7velo can also create one."
+msgstr ""
+
+#: src/Audit/Checks/LlmsTxt.php:164
+msgid "You don’t have an llms.txt file, a short summary of your site that AI assistants can read."
+msgstr ""
+
+#: src/Audit/Checks/LlmsTxt.php:165
+msgid "You don’t have an llms.txt file, a short summary of your store that AI assistants can read."
+msgstr ""
+
+#: src/Audit/Checks/LlmsTxt.php:168
+msgid "Your site has an llms.txt file (from x7velo)."
+msgstr ""
+
+#: src/Audit/Checks/LlmsTxt.php:169
+msgid "Your store has an llms.txt file (from x7velo)."
+msgstr ""
+
+#: src/Audit/Checks/LlmsTxt.php:173
+msgid "Your site has an llms.txt file (managed by a file on your server)."
+msgstr ""
+
+#: src/Audit/Checks/LlmsTxt.php:174
+msgid "Your store has an llms.txt file (managed by a file on your server)."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Audit/Checks/LlmsTxt.php:179
+#, php-format
+msgid "Your site has an llms.txt file (managed by %s)."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Audit/Checks/LlmsTxt.php:181
+#, php-format
+msgid "Your store has an llms.txt file (managed by %s)."
+msgstr ""
+
+#: src/Audit/Checks/LlmsTxt.php:187
+#: src/Detection/FixerStates.php:81
+#: assets/src/constants.js:195
+#: assets/src/constants.js:196
+#: assets/src/constants.js:197
+msgid "a file on your server"
+msgstr ""
+
+#. translators: %s: comma-separated sources, e.g. "Rank Math, a file on your server".
+#: src/Audit/Checks/LlmsTxt.php:193
+#, php-format
+msgid "Your site has more than one llms.txt (%s). The file on your server is the one visitors get; turn the others off."
+msgstr ""
+
+#. translators: %s: comma-separated sources, e.g. "Rank Math, a file on your server".
+#: src/Audit/Checks/LlmsTxt.php:195
+#, php-format
+msgid "Your store has more than one llms.txt (%s). The file on your server is the one visitors get; turn the others off."
+msgstr ""
+
+#. translators: %s: comma-separated sources.
+#: src/Audit/Checks/LlmsTxt.php:199
+#, php-format
+msgid "Your site has more than one llms.txt (%s). Keep one and turn the others off."
+msgstr ""
+
+#. translators: %s: comma-separated sources.
+#: src/Audit/Checks/LlmsTxt.php:201
+#, php-format
+msgid "Your store has more than one llms.txt (%s). Keep one and turn the others off."
+msgstr ""
+
+#: src/Audit/Checks/Permalinks.php:64
+msgid "Your page links look like ?p=123. Readable links help assistants and are needed for llms.txt. Change to “Post name” in Settings → Permalinks."
+msgstr ""
+
+#: src/Audit/Checks/Permalinks.php:66
+msgid "Your page links are readable."
+msgstr ""
+
+#: src/Audit/Checks/Permalinks.php:69
+msgid "Your product links look like ?p=123. Readable links help assistants and are needed for llms.txt. Change to “Post name” in Settings → Permalinks."
+msgstr ""
+
+#: src/Audit/Checks/Permalinks.php:71
+msgid "Your product links are readable."
+msgstr ""
+
+#: src/Audit/Checks/ProductCategories.php:72
+msgid "All your products are in a category."
+msgstr ""
+
+#. translators: %d: number of products.
+#: src/Audit/Checks/ProductCategories.php:76
+#, php-format
+msgid "%d product is “Uncategorized”. Categories help assistants understand what you sell."
+msgid_plural "%d products are “Uncategorized”. Categories help assistants understand what you sell."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Audit/Checks/ProductDataCheck.php:127
+msgid "We stopped checking your products because your site was running low on memory. Ask your host to raise the PHP memory limit, then run the audit again."
+msgstr ""
+
+#: src/Audit/Checks/ProductDataCheck.php:151
+#: src/Audit/Checks/Shipping.php:225
+msgid "You have no published products yet, so there is nothing to check."
+msgstr ""
+
+#: src/Audit/Checks/ProductDescription.php:63
+msgid "All your products have a useful description."
+msgstr ""
+
+#. translators: %d: number of products.
+#: src/Audit/Checks/ProductDescription.php:67
+#, php-format
+msgid "%d product has little or no description. Assistants recommend products they can describe."
+msgid_plural "%d products have little or no description. Assistants recommend products they can describe."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Audit/Checks/ProductFeed.php:104
+msgid "Your store has a product feed (from x7velo)."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Google for WooCommerce".
+#: src/Audit/Checks/ProductFeed.php:107
+#, php-format
+msgid "Your store has a product feed (from %s)."
+msgstr ""
+
+#: src/Audit/Checks/ProductFeed.php:109
+msgid "You don’t have a product feed. A feed gives shopping assistants your full product list with prices and stock in one file."
+msgstr ""
+
+#: src/Audit/Checks/ProductIdentifiers.php:99
+msgid "Most of your products have the codes assistants use to match them."
+msgstr ""
+
+#. translators: %d: number of products.
+#: src/Audit/Checks/ProductIdentifiers.php:104
+#, php-format
+msgid "%d product has no SKU. A SKU helps assistants tell your products apart."
+msgid_plural "%d products have no SKU. A SKU helps assistants tell your products apart."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of products.
+#: src/Audit/Checks/ProductIdentifiers.php:110
+#, php-format
+msgid "%d product has no SKU, or has neither a barcode (GTIN/EAN) nor a brand. Codes like these help assistants match your product to what shoppers ask for. If you make your own products, tell x7velo in its settings."
+msgid_plural "%d products have no SKU, or have neither a barcode (GTIN/EAN) nor a brand. Codes like these help assistants match your products to what shoppers ask for. If you make your own products, tell x7velo in its settings."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Audit/Checks/ProductImage.php:63
+msgid "All your products have a main image."
+msgstr ""
+
+#. translators: %d: number of products.
+#: src/Audit/Checks/ProductImage.php:67
+#, php-format
+msgid "%d product has no main image."
+msgid_plural "%d products have no main image."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Audit/Checks/ProductPrice.php:72
+msgid "All your products have a price."
+msgstr ""
+
+#. translators: %d: number of products.
+#: src/Audit/Checks/ProductPrice.php:76
+#, php-format
+msgid "%d product has no price. Assistants skip products they can’t quote."
+msgid_plural "%d products have no price. Assistants skip products they can’t quote."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: plugin name, e.g. "Yoast WooCommerce SEO".
+#: src/Audit/Checks/ProductSchemaSource.php:254
+#, php-format
+msgid "Product details are added twice, by WooCommerce and %s. Turn off product schema in one of them."
+msgstr ""
+
+#: src/Audit/Checks/ProductSchemaSource.php:256
+msgid "Your product details come from Rank Math. Your products have brands, but Rank Math doesn’t include them: set Rank Math → General Settings → WooCommerce → Brand to “Product brands”."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Rank Math".
+#: src/Audit/Checks/ProductSchemaSource.php:259
+#, php-format
+msgid "Your product pages include product details AI assistants can read (managed by %s)."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Schema Pro".
+#: src/Audit/Checks/ProductSchemaSource.php:262
+#, php-format
+msgid "Your product details appear to come from %s. x7velo can’t confirm its output, so it leaves product schema alone."
+msgstr ""
+
+#: src/Audit/Checks/ProductSchemaSource.php:264
+msgid "Your product pages include product details AI assistants can read (from x7velo)."
+msgstr ""
+
+#: src/Audit/Checks/ProductSchemaSource.php:266
+msgid "Your product pages don’t include product details AI assistants can read. Another plugin seems to remove WooCommerce’s product schema without adding its own."
+msgstr ""
+
+#: src/Audit/Checks/ProductSchemaSource.php:268
+msgid "Your product pages include product details AI assistants can read (from WooCommerce)."
+msgstr ""
+
+#: src/Audit/Checks/ReturnsPolicy.php:179
+msgid "Your returns policy page is set."
+msgstr ""
+
+#: src/Audit/Checks/ReturnsPolicy.php:181
+msgid "You have a terms page, but no returns policy page is selected. Shoppers and assistants look for a returns policy before recommending a store. Pick your returns page, or create one."
+msgstr ""
+
+#: src/Audit/Checks/ReturnsPolicy.php:183
+msgid "Shoppers and assistants look for a returns policy before recommending a store. Pick your returns page, or create one."
+msgstr ""
+
+#: src/Audit/Checks/SearchVisibility.php:64
+msgid "Your site is telling every search engine and AI assistant to stay away. This is usually left on by mistake after building the site. Turn off “Discourage search engines from indexing this site” in Settings → Reading."
+msgstr ""
+
+#: src/Audit/Checks/SearchVisibility.php:66
+msgid "Search engines and AI assistants are allowed to read your site."
+msgstr ""
+
+#: src/Audit/Checks/Shipping.php:227
+msgid "You only sell virtual products, so shipping doesn’t apply."
+msgstr ""
+
+#: src/Audit/Checks/Shipping.php:229
+msgid "You have shipping options set up for your own country."
+msgstr ""
+
+#: src/Audit/Checks/Shipping.php:231
+msgid "You have shipping options, but none for your store’s own country. Check your shipping zones so assistants can tell local shoppers you deliver to them."
+msgstr ""
+
+#: src/Audit/Checks/Shipping.php:233
+msgid "No shipping options are set up, so assistants can’t tell shoppers if you deliver to them. Add a shipping zone in WooCommerce → Settings → Shipping."
+msgstr ""
+
+#: src/Audit/Checks/Sitemap.php:145
+#: src/Audit/Checks/Sitemap.php:174
+msgid "You don’t have a sitemap: WordPress turns it off while your site asks search engines to stay away. Fix that first in Settings → Reading."
+msgstr ""
+
+#: src/Audit/Checks/Sitemap.php:147
+msgid "You don’t have a sitemap, so assistants have no list of your product pages."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Audit/Checks/Sitemap.php:150
+#, php-format
+msgid "Your sitemap (from %s) leaves out your products, or your products are set to “noindex”. Include products in its settings."
+msgstr ""
+
+#: src/Audit/Checks/Sitemap.php:152
+#: src/Audit/Checks/Sitemap.php:184
+msgid "Your sitemap works, but your robots.txt doesn’t point to it, so assistants may not find it."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Audit/Checks/Sitemap.php:156
+#, php-format
+msgid "Your sitemap (from %s) lists your products."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Audit/Checks/Sitemap.php:159
+#, php-format
+msgid "Your sitemap (from %s) lists your products and assistants can find it."
+msgstr ""
+
+#: src/Audit/Checks/Sitemap.php:176
+msgid "You don’t have a sitemap, so assistants have no list of your pages."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Audit/Checks/Sitemap.php:180
+#, php-format
+msgid "Your sitemap leaves out your pages, or they are set to “noindex”. Include them in the sitemap settings of %s."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Audit/Checks/Sitemap.php:182
+#, php-format
+msgid "Your sitemap leaves out your posts, or they are set to “noindex”. Include them in the sitemap settings of %s."
+msgstr ""
+
+#: src/Audit/Checks/Sitemap.php:188
+msgid "Your sitemap lists your pages."
+msgstr ""
+
+#: src/Audit/Checks/Sitemap.php:189
+msgid "Your sitemap lists your posts."
+msgstr ""
+
+#: src/Audit/Checks/Sitemap.php:192
+msgid "Your sitemap lists your pages and assistants can find it."
+msgstr ""
+
+#: src/Audit/Checks/Sitemap.php:193
+msgid "Your sitemap lists your posts and assistants can find it."
+msgstr ""
+
+#: src/Audit/Checks/StoreIdentity.php:118
+msgid "Your store has no country or currency set. Assistants trust stores that say who they are and where they ship from. Set them in WooCommerce → Settings → General."
+msgstr ""
+
+#: src/Audit/Checks/StoreIdentity.php:120
+msgid "Assistants trust stores that say who they are and where they ship from. Add your store address in WooCommerce → Settings → General."
+msgstr ""
+
+#: src/Audit/Checks/StoreIdentity.php:122
+msgid "Your site title or contact email is missing. Add a site title in Settings → General and a sender email in WooCommerce → Settings → Emails."
+msgstr ""
+
+#: src/Audit/Checks/StoreIdentity.php:124
+msgid "Your store name, address, country, currency and contact email are set."
+msgstr ""
+
+#: src/Audit/Scorer.php:103
+#: assets/src/constants.js:47
+#: assets/src/constants.js:71
+msgid "Easy for AI assistants to read"
+msgstr ""
+
+#: src/Audit/Scorer.php:105
+#: assets/src/constants.js:40
+#: assets/src/constants.js:64
+msgid "Partly readable"
+msgstr ""
+
+#: src/Audit/Scorer.php:107
+#: assets/src/constants.js:33
+#: assets/src/constants.js:57
+msgid "Hard for AI assistants to read"
+msgstr ""
+
+#: src/Audit/StoreOnlyCheck.php:112
+msgid "Doesn’t apply: this check is for WooCommerce stores."
+msgstr ""
+
+#: src/Cli/AuditCommand.php:64
+msgid "An audit is already running for this site. Try again in a moment."
+msgstr ""
+
+#: src/Cli/AuditCommand.php:85
+msgid "No score: the store has no published products yet."
+msgstr ""
+
+#: src/Cli/AuditCommand.php:89
+msgid "Couldn’t complete the audit (too many checks failed to run). Run it again."
+msgstr ""
+
+#. translators: 1: score 0–100, 2: band label, e.g. "Partly readable".
+#: src/Cli/AuditCommand.php:95
+#, php-format
+msgid "Score: %1$d/100 (%2$s) — capped by a critical issue"
+msgstr ""
+
+#. translators: 1: score 0–100, 2: band label, e.g. "Partly readable".
+#: src/Cli/AuditCommand.php:97
+#, php-format
+msgid "Score: %1$d/100 (%2$s)"
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:121
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:513
+msgid "Shop"
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:122
+msgid "Product categories"
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:123
+msgid "Products"
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:178
+msgid "Key pages"
+msgstr ""
+
+#. translators: %s: category name.
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:381
+#, php-format
+msgid "Posts: %s"
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:383
+msgid "Recent posts"
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:478
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:608
+#: assets/src/copy/checks.js:179
+msgid "Sitemap"
+msgstr ""
+
+#. translators: %s: currency code, e.g. "EUR".
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:498
+#, php-format
+msgid "Online store. Prices in %s."
+msgstr ""
+
+#. translators: 1: country name, 2: currency code, e.g. "EUR".
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:501
+#, php-format
+msgid "Online store based in %1$s. Prices in %2$s."
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:515
+#: assets/src/components/SettingsTab.js:471
+#: assets/src/copy/checks.js:346
+msgid "Returns policy"
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:517
+msgid "Terms and conditions"
+msgstr ""
+
+#: src/Fixers/LlmsTxt/LlmsTxtBuilder.php:604
+#: assets/src/copy/dialogs.js:406
+msgid "Product feed"
+msgstr ""
+
+#: src/Notices/Notices.php:123
+msgid "x7velo is active. See how ready your store is for AI assistants."
+msgstr ""
+
+#: src/Notices/Notices.php:124
+msgid "x7velo is active. See how ready your site is for AI assistants."
+msgstr ""
+
+#: src/Notices/Notices.php:128
+msgid "Check my store"
+msgstr ""
+
+#: src/Notices/Notices.php:128
+msgid "Check my site"
+msgstr ""
+
+#: src/Notices/Notices.php:139
+msgid "See details"
+msgstr ""
+
+#: src/Notices/Notices.php:146
+#: assets/src/components/App.js:186
+msgid "Turn it off"
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Notices/Notices.php:165
+#: assets/src/components/App.js:132
+#, php-format,js-format
+msgid "%s no longer creates your llms.txt, so x7velo’s llms.txt is active again."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Rank Math".
+#: src/Notices/Notices.php:167
+#: assets/src/components/App.js:140
+#, php-format,js-format
+msgid "%s no longer adds product details, so x7velo’s product details are active again."
+msgstr ""
+
+#: src/Notices/Notices.php:168
+#: assets/src/components/App.js:146
+msgid "You turned it on earlier, so it came back on its own."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Notices/Notices.php:172
+#: assets/src/components/App.js:151
+#, php-format,js-format
+msgid "%s now creates your llms.txt, so x7velo paused its own. Your site has one llms.txt, as it should. You don’t need to do anything."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: src/Notices/Notices.php:176
+#: assets/src/components/App.js:159
+#, php-format,js-format
+msgid "%s now creates your llms.txt, so x7velo paused its own. Your store has one llms.txt, as it should. You don’t need to do anything."
+msgstr ""
+
+#. translators: %1$s: plugin name, e.g. "Rank Math".
+#: src/Notices/Notices.php:178
+#: assets/src/components/App.js:169
+#, php-format,js-format
+msgid "%1$s now adds product details to your pages, so x7velo paused its own. Your products still have product details, just from %1$s."
+msgstr ""
+
+#: src/Notices/Notices.php:193
+msgid "A file on your server"
+msgstr ""
+
+#: src/Notices/Notices.php:198
+#: assets/src/components/App.js:125
+msgid "Another plugin"
+msgstr ""
+
+#: src/Rest/AuditController.php:105
+msgid "The audit has not run yet."
+msgstr ""
+
+#: src/Rest/AuditController.php:124
+msgid "An audit is already running. Please wait a moment and try again."
+msgstr ""
+
+#. translators: %s: comma-separated parameter names.
+#: src/Rest/SettingsController.php:132
+#, php-format
+msgid "Unknown parameter: %s"
+msgid_plural "Unknown parameters: %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Rest/SettingsController.php:162
+#: src/Rest/SettingsController.php:184
+msgid "This fix can’t be turned on right now. Check the Fixes tab for why."
+msgstr ""
+
+#: src/Settings.php:81
+msgid "Published page with the returns policy (0 = none)."
+msgstr ""
+
+#: src/Settings.php:87
+msgid "Experimental crawler tokens to block (must be marked experimental in the bundled list)."
+msgstr ""
+
+#: src/Settings.php:97
+msgid "Return window in days (null = not set)."
+msgstr ""
+
+#: src/Settings.php:103
+msgid "Shortest usual delivery time in days; 0 = same day (null = not set)."
+msgstr ""
+
+#: src/Settings.php:109
+msgid "Longest usual delivery time in days (null = not set)."
+msgstr ""
+
+#: src/Settings.php:129
+msgid "Choose a published page."
+msgstr ""
+
+#: src/Settings.php:134
+#: src/Settings.php:137
+msgid "Enter a return window between 1 and 365 days."
+msgstr ""
+
+#: src/Settings.php:143
+msgid "Enter a number of days between 0 and 60."
+msgstr ""
+
+#: src/Settings.php:149
+msgid "The shortest delivery time can’t be longer than the longest."
+msgstr ""
+
+#: src/Settings.php:155
+msgid "Only crawlers marked experimental can be listed here."
+msgstr ""
+
+#. translators: %s: parameter name.
+#: src/Settings.php:172
+#, php-format
+msgid "Invalid parameter: %s"
+msgstr ""
+
+#. translators: 1: button label, e.g. "Fix it", 2: check title, e.g. "Store summary for AI".
+#: assets/src/components/ActionButtons.js:18
+#, js-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: assets/src/components/ActionButtons.js:35
+#: assets/src/components/ActionButtons.js:39
+#: assets/src/components/Overview.js:567
+msgid "Fix it"
+msgstr ""
+
+#: assets/src/components/ActionButtons.js:48
+#: assets/src/components/ActionButtons.js:52
+#: assets/src/components/CheckList.js:438
+#: assets/src/components/CheckList.js:537
+#: assets/src/components/FixesTab.js:392
+#: assets/src/components/FixesTab.js:596
+#: assets/src/components/Overview.js:255
+#: assets/src/components/Overview.js:586
+msgid "Show me where"
+msgstr ""
+
+#: assets/src/components/ActionButtons.js:61
+msgid "Choose returns page"
+msgstr ""
+
+#: assets/src/components/ActionButtons.js:70
+#: assets/src/components/ActionButtons.js:74
+#: assets/src/components/CheckList.js:413
+#: assets/src/components/CheckList.js:528
+#: assets/src/components/CheckList.js:550
+#: assets/src/components/CheckList.js:599
+msgid "How to fix"
+msgstr ""
+
+#: assets/src/components/App.js:82
+msgid "Audit finished. Add products first: your store has no published products yet."
+msgstr ""
+
+#: assets/src/components/App.js:89
+msgid "Audit finished. We couldn’t finish checking your site."
+msgstr ""
+
+#: assets/src/components/App.js:93
+msgid "Audit finished. We couldn’t finish checking your store."
+msgstr ""
+
+#. translators: 1: score 0–100, 2: band label, 3: number of things to fix.
+#: assets/src/components/App.js:104
+#, js-format
+msgid "Audit finished. Your score is %1$d out of 100: %2$s. %3$d thing to fix."
+msgid_plural "Audit finished. Your score is %1$d out of 100: %2$s. %3$d things to fix."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: name of the fix, e.g. "Product feed".
+#: assets/src/components/App.js:239
+#: assets/src/components/App.js:460
+#, js-format
+msgid "%s turned on."
+msgstr ""
+
+#. translators: 1: old score, 2: new score.
+#: assets/src/components/App.js:251
+#, js-format
+msgid "Score went from %1$d to %2$d."
+msgstr ""
+
+#. translators: %s: name of the fix, e.g. "Product feed".
+#: assets/src/components/App.js:465
+#, js-format
+msgid "%s turned off."
+msgstr ""
+
+#. translators: %s: reason, e.g. "Managed by Yoast SEO."
+#: assets/src/components/App.js:488
+#, js-format
+msgid "x7velo can’t turn this on right now: %s"
+msgstr ""
+
+#: assets/src/components/App.js:501
+msgid "The page lost contact with your site."
+msgstr ""
+
+#. translators: 1: name of the fix, 2: reason.
+#: assets/src/components/App.js:508
+#, js-format
+msgid "x7velo couldn’t turn on %1$s. Nothing was changed. Reason: %2$s"
+msgstr ""
+
+#. translators: 1: name of the fix, 2: reason.
+#: assets/src/components/App.js:517
+#, js-format
+msgid "x7velo couldn’t turn off %1$s. Nothing was changed. Reason: %2$s"
+msgstr ""
+
+#: assets/src/components/App.js:536
+msgid "Overview"
+msgstr ""
+
+#: assets/src/components/App.js:537
+msgctxt "tab name (noun)"
+msgid "Fixes"
+msgstr ""
+
+#: assets/src/components/App.js:538
+msgid "Settings"
+msgstr ""
+
+#: assets/src/components/App.js:549
+msgid "Reload page"
+msgstr ""
+
+#: assets/src/components/App.js:556
+msgid "Your login session expired. Reload the page and try again."
+msgstr ""
+
+#: assets/src/components/App.js:569
+#: assets/src/components/FixesTab.js:833
+msgid "Try again"
+msgstr ""
+
+#: assets/src/components/App.js:575
+msgid "The audit didn’t finish because the page lost contact with your site. Nothing was changed."
+msgstr ""
+
+#. translators: %d: number of checks.
+#: assets/src/components/CheckList.js:37
+#, js-format
+msgid "%d to fix"
+msgid_plural "%d to fix"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of checks.
+#: assets/src/components/CheckList.js:46
+#, js-format
+msgid "%d to improve"
+msgid_plural "%d to improve"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of checks.
+#: assets/src/components/CheckList.js:55
+#, js-format
+msgid "%d doesn’t apply"
+msgid_plural "%d don’t apply"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of checks.
+#: assets/src/components/CheckList.js:64
+#, js-format
+msgid "%d couldn’t run"
+msgid_plural "%d couldn’t run"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/src/components/CheckList.js:69
+msgid "All good"
+msgstr ""
+
+#: assets/src/components/CheckList.js:97
+msgid "All checks"
+msgstr ""
+
+#: assets/src/components/CheckList.js:100
+msgid "Checks that did run are listed below. They’re not scored."
+msgstr ""
+
+#. translators: %d: number of store checks.
+#: assets/src/components/CheckList.js:144
+#, js-format
+msgid "Store checks (%d) — for WooCommerce stores"
+msgstr ""
+
+#. translators: %s: page title.
+#: assets/src/components/CheckList.js:290
+#, js-format
+msgid "We found a page that may be your returns policy: “%s”."
+msgstr ""
+
+#: assets/src/components/CheckList.js:301
+#: assets/src/components/SettingsTab.js:211
+msgid "Use this page"
+msgstr ""
+
+#. translators: 1: site address with folder, e.g. example.com/blog, 2: main site, e.g. example.com.
+#: assets/src/components/CheckList.js:321
+#, js-format
+msgid "Your site is in a folder of a bigger site (%1$s), so its robots.txt belongs to the main site at %2$s. x7velo can’t check or change it from here."
+msgstr ""
+
+#. translators: %s: main site address, e.g. example.com.
+#: assets/src/components/CheckList.js:330
+#, js-format
+msgid "If AI search assistants should read your site, ask whoever manages %s to check its robots.txt."
+msgstr ""
+
+#. translators: 1: store address with folder, e.g. example.com/shop, 2: main site, e.g. example.com.
+#: assets/src/components/CheckList.js:341
+#, js-format
+msgid "Your store is in a folder of a bigger site (%1$s), so its robots.txt belongs to the main site at %2$s. x7velo can’t check or change it from here."
+msgstr ""
+
+#. translators: %s: main site address, e.g. example.com.
+#: assets/src/components/CheckList.js:350
+#, js-format
+msgid "If AI shopping assistants should read your store, ask whoever manages %s to check its robots.txt."
+msgstr ""
+
+#. translators: %s: technical name, e.g. "DATA-01 · price".
+#: assets/src/components/CheckList.js:370
+#, js-format
+msgid "Technical name: %s"
+msgstr ""
+
+#: assets/src/components/CheckList.js:381
+#: assets/src/components/CheckList.js:409
+#: assets/src/components/CheckList.js:478
+#: assets/src/components/CheckList.js:624
+msgid "What we found"
+msgstr ""
+
+#: assets/src/components/CheckList.js:384
+msgid "Couldn’t check — stopped to protect your site’s memory."
+msgstr ""
+
+#: assets/src/components/CheckList.js:388
+msgid "We couldn’t run this check."
+msgstr ""
+
+#: assets/src/components/CheckList.js:391
+msgid "It’s left out of your score. Run the audit again. If it keeps happening, copy the details for support."
+msgstr ""
+
+#: assets/src/components/CheckList.js:398
+#: assets/src/components/Overview.js:103
+#: assets/src/components/Overview.js:790
+#: assets/src/components/SettingsTab.js:453
+msgid "Run audit again"
+msgstr ""
+
+#: assets/src/components/CheckList.js:418
+msgid "This check is left out of your score."
+msgstr ""
+
+#: assets/src/components/CheckList.js:431
+msgid "Tip: your products have brands, but Rank Math doesn’t include them yet. In Rank Math → General Settings → WooCommerce, set “Brand” to “Product brands”."
+msgstr ""
+
+#. translators: %s: plugin name.
+#: assets/src/components/CheckList.js:448
+#, js-format
+msgid "Another plugin (%s) seems to add product details. x7velo can’t confirm it, so it stays off."
+msgstr ""
+
+#: assets/src/components/CheckList.js:458
+msgid "Barcodes not checked because you make your own products. Change in Settings."
+msgstr ""
+
+#: assets/src/components/CheckList.js:493
+#: assets/src/components/CheckList.js:497
+msgid "Turn off"
+msgstr ""
+
+#: assets/src/components/CheckList.js:502
+msgid "x7velo stays off here so nothing is added twice."
+msgstr ""
+
+#: assets/src/components/CheckList.js:530
+msgid "This is the same setting as “Visible to search engines” above. Fix that one and this check passes too."
+msgstr ""
+
+#: assets/src/components/CheckList.js:541
+msgid "x7velo won’t use robots.txt rules to undo your Reading setting."
+msgstr ""
+
+#: assets/src/components/CheckList.js:552
+msgid "Your site has its own robots.txt file, so x7velo can’t add rules to it. Ask your host or developer to add these lines to the robots.txt file in your site’s main folder:"
+msgstr ""
+
+#: assets/src/components/CheckList.js:567
+#: assets/src/components/FixesTab.js:559
+msgid "Lines that let AI search assistants in"
+msgstr ""
+
+#: assets/src/components/CheckList.js:571
+#: assets/src/components/FixesTab.js:563
+msgid "Lines that let AI shopping assistants in"
+msgstr ""
+
+#: assets/src/components/CheckList.js:584
+msgid "What “Fix it” does"
+msgstr ""
+
+#: assets/src/components/CheckList.js:612
+msgid "x7velo never turns off another plugin’s settings for you."
+msgstr ""
+
+#: assets/src/components/CheckList.js:629
+msgid "Why it matters"
+msgstr ""
+
+#: assets/src/components/CheckList.js:637
+msgid "Made changes? Run the audit again to update your score."
+msgstr ""
+
+#. translators: 1: number of examples shown, 2: number of products with the problem.
+#: assets/src/components/CheckList.js:657
+#, js-format
+msgid "Examples (%1$d of %2$d)"
+msgstr ""
+
+#: assets/src/components/CheckList.js:671
+msgid "Edit"
+msgstr ""
+
+#: assets/src/components/CheckList.js:681
+msgid "View products"
+msgstr ""
+
+#: assets/src/components/ConfirmModal.js:102
+msgid "Cancel"
+msgstr ""
+
+#: assets/src/components/CopyBlock.js:19
+#: assets/src/components/CopyBlock.js:30
+msgid "Copied."
+msgstr ""
+
+#: assets/src/components/CopyBlock.js:31
+#: assets/src/components/CopyBlock.js:44
+msgid "Copy lines"
+msgstr ""
+
+#. translators: %s: what the lines are for, e.g. "Lines that let AI shopping assistants in".
+#: assets/src/components/CopyBlock.js:49
+#, js-format
+msgid "Copy lines: %s"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:134
+msgid "No other plugin adds product details to your pages, so x7velo adds price, stock and other details. It also adds your returns policy and delivery times when set in Settings."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:138
+msgid "WooCommerce already adds price, stock, brand and barcode. x7velo adds the returns policy and delivery times you set in Settings."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Rank Math".
+#: assets/src/components/FixesTab.js:147
+#, js-format
+msgid "Managed by %s. x7velo stays off so product details aren’t added twice."
+msgstr ""
+
+#. translators: Stands in for a plugin name inside a sentence, e.g. “Managed by another plugin.”
+#: assets/src/components/FixesTab.js:153
+#: assets/src/copy/fixers.js:121
+msgid "another plugin"
+msgstr ""
+
+#. translators: %1$s: plugin name, e.g. "Rank Math".
+#: assets/src/components/FixesTab.js:161
+#, js-format
+msgid "Paused. %1$s adds product details now, so x7velo isn’t adding its own. If %1$s stops, x7velo’s product details come back on automatically."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:167
+msgid "Paused. Another plugin adds product details now, so x7velo isn’t adding its own. If that plugin stops, x7velo’s product details come back on automatically."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:174
+msgid "Returns policy: included (no time limit)."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:177
+msgid "Returns policy: included (no returns accepted)."
+msgstr ""
+
+#. translators: %d: number of days.
+#: assets/src/components/FixesTab.js:185
+#, js-format
+msgid "Returns policy: included (%d day)."
+msgid_plural "Returns policy: included (%d days)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/src/components/FixesTab.js:195
+msgid "Returns policy: included."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:199
+msgid "Returns policy: not included yet. Check that your returns page is published, then check your return window in Settings."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:203
+msgid "Returns policy: not included yet. Choose your returns page and return window in Settings to include it."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:210
+msgid "Delivery times: not included yet. Add your delivery days in Settings to include them."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:218
+#: assets/src/copy/checks.js:234
+#: assets/src/copy/dialogs.js:299
+msgid "Product details for AI assistants"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:219
+#: assets/src/copy/checks.js:235
+msgid "Product schema (JSON-LD)"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:220
+msgid "Adds your returns policy and delivery times to the product information on your product pages, in a format AI assistants and search engines read."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:231
+msgid "Add product information to product pages"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:235
+msgid "Add returns policy and delivery times to WooCommerce’s product information"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:249
+msgid "x7velo isn’t adding anything yet. Answer the two questions in Settings first."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:261
+#: assets/src/components/FixesTab.js:273
+msgid "Go to Settings"
+msgstr ""
+
+#. translators: %s: country name, e.g. Brazil.
+#: assets/src/components/FixesTab.js:293
+#, js-format
+msgid "Delivery times: not included yet. They’re added only for products with free or flat-rate shipping in %s. Check your shipping settings in WooCommerce."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:299
+msgid "Delivery times: not included yet. They’re added only for products with free or flat-rate shipping in your country. Check your shipping settings in WooCommerce."
+msgstr ""
+
+#. translators: %s: country name, e.g. Brazil.
+#: assets/src/components/FixesTab.js:315
+#, js-format
+msgid "Delivery times: included for products with free or flat-rate shipping in %s."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:321
+msgid "Delivery times: included for products with free or flat-rate shipping in your country."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:334
+msgid "View llms.txt"
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: assets/src/components/FixesTab.js:350
+#, js-format
+msgid "Your site already has an llms.txt from %s, so x7velo stays off to avoid two versions."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: assets/src/components/FixesTab.js:358
+#, js-format
+msgid "Your store already has an llms.txt from %s, so x7velo stays off to avoid two versions."
+msgstr ""
+
+#. translators: %1$s: plugin name, e.g. "Yoast SEO".
+#: assets/src/components/FixesTab.js:373
+#, js-format
+msgid "Paused. %1$s creates your llms.txt now, so x7velo isn’t publishing its own. If %1$s stops, x7velo’s llms.txt comes back on automatically."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:379
+msgid "Paused. Another plugin creates your llms.txt now, so x7velo isn’t publishing its own. If that plugin stops, x7velo’s llms.txt comes back on automatically."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:405
+msgid "Site summary for AI (llms.txt)"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:406
+msgid "Store summary for AI (llms.txt)"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:410
+msgid "A short public file that describes your site, its main pages and recent posts."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:414
+msgid "A short public file that describes your store, categories and products."
+msgstr ""
+
+#. translators: %s: address, e.g. example.com/llms.txt.
+#: assets/src/components/FixesTab.js:428
+#, js-format
+msgid "Publish a site summary at %s"
+msgstr ""
+
+#. translators: %s: address, e.g. example.com/llms.txt.
+#: assets/src/components/FixesTab.js:433
+#, js-format
+msgid "Publish a store summary at %s"
+msgstr ""
+
+#. translators: %s: feed address.
+#: assets/src/components/FixesTab.js:459
+#, js-format
+msgid "Your feed address: %s"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:465
+msgid "Copy"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:466
+msgid "Copy feed address"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:469
+msgid "View feed"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:477
+msgid "Product list for shopping assistants (product feed)"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:481
+msgid "A public list of everything you sell, with prices and stock."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:490
+msgid "Publish a product feed"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:501
+msgid "ByteDance doesn’t publish official details about this bot, and it may not follow these rules."
+msgstr ""
+
+#. translators: %s: company, e.g. ByteDance.
+#: assets/src/components/FixesTab.js:508
+#, js-format
+msgid "%s doesn’t publish official details about this bot, and it may not follow these rules."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:535
+#: assets/src/copy/fixers.js:61
+msgid "Your site has its own robots.txt file, so x7velo can’t add rules to it."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:544
+msgid "If you want to let AI search assistants in, ask your host or developer to add these lines:"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:548
+msgid "If you want to let AI shopping assistants in, ask your host or developer to add these lines:"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:574
+msgid "Also want to block AI training bots? These lines do that too:"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:581
+msgid "Lines that block AI training bots"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:614
+msgid "Crawler rules (robots.txt)"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:615
+msgid "Rules that tell bots which parts of your site they may read."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:631
+msgid "Let AI search assistants in"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:635
+msgid "Let AI shopping assistants in"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:642
+msgid "Adds rules that allow assistants like ChatGPT search and Perplexity to read your site, and points them to your sitemap. Your existing rules are not changed."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:646
+msgid "Adds rules that allow assistants like ChatGPT search and Perplexity to read your shop, and points them to your sitemap. Your existing rules are not changed."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:655
+#: assets/src/components/FixesTab.js:663
+#: assets/src/copy/dialogs.js:134
+msgid "Show the exact lines"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:679
+msgid "Also block AI training bots"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:685
+msgid "Optional. Asks bots that collect content to train AI models (such as GPTBot and CCBot) not to read your site. This doesn’t affect your score or block search assistants."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:689
+msgid "Optional. Asks bots that collect content to train AI models (such as GPTBot and CCBot) not to read your site. This doesn’t affect your score or block shopping assistants."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:700
+#: assets/src/copy/dialogs.js:178
+msgid "Which bots are these?"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:723
+msgid "Also block Google-Extended"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:729
+msgid "Asks Google not to use your content to train its Gemini models. Blocking it can reduce your site’s visibility in the Gemini app. Google Search, AI Overviews and AI Mode are not affected."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:733
+msgid "Asks Google not to use your content to train its Gemini models. Blocking it can reduce your store’s visibility in the Gemini app. Google Search, AI Overviews and AI Mode are not affected."
+msgstr ""
+
+#. translators: 1: bot name, e.g. Bytespider, 2: company, e.g. ByteDance.
+#: assets/src/components/FixesTab.js:767
+#, js-format
+msgid "Also block %1$s (%2$s)"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:775
+msgid "EXPERIMENTAL"
+msgstr ""
+
+#: assets/src/components/FixesTab.js:820
+msgid "Fixes aren’t available in this version of x7velo yet."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:836
+msgid "Your fixes couldn’t be loaded because the page lost contact with your site. Nothing was changed."
+msgstr ""
+
+#: assets/src/components/FixesTab.js:850
+msgid "These are the changes x7velo can make for you. Nothing is on until you turn it on. Turning something off puts your site back the way it was."
+msgstr ""
+
+#: assets/src/components/Overview.js:89
+msgid "This usually takes a few seconds."
+msgstr ""
+
+#. translators: %d: number of checks used in the score.
+#: assets/src/components/Overview.js:140
+#, js-format
+msgid "Based on %d check that applies to your site."
+msgid_plural "Based on %d checks that apply to your site."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of store checks.
+#: assets/src/components/Overview.js:151
+#, js-format
+msgid "%d store check doesn’t apply because WooCommerce isn’t active on this site."
+msgid_plural "%d store checks don’t apply because WooCommerce isn’t active on this site."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of checks.
+#: assets/src/components/Overview.js:162
+#, js-format
+msgid "%d other check didn’t apply to your site."
+msgid_plural "%d other checks didn’t apply to your site."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of checks.
+#: assets/src/components/Overview.js:173
+#: assets/src/components/Overview.js:306
+#, js-format
+msgid "%d check couldn’t run."
+msgid_plural "%d checks couldn’t run."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/src/components/Overview.js:211
+msgid "Your score"
+msgstr ""
+
+#. translators: 1: score 0–100, 2: band label, e.g. "Partly readable".
+#: assets/src/components/Overview.js:216
+#, js-format
+msgid "Your AI readiness score is %1$d out of 100: %2$s."
+msgstr ""
+
+#. translators: %s: what is wrong, e.g. "Your site asks search engines and AI assistants to stay away."
+#: assets/src/components/Overview.js:247
+#, js-format
+msgid "Your score is limited to 20 until this is fixed: %s"
+msgstr ""
+
+#: assets/src/components/Overview.js:262
+msgid "Your fixes or plugins changed since the last check. Run the audit again to update your score."
+msgstr ""
+
+#. translators: %s: date and time.
+#: assets/src/components/Overview.js:272
+#, js-format
+msgid "Last checked: %s"
+msgstr ""
+
+#. translators: 1: checks used in the score, 2: all checks.
+#: assets/src/components/Overview.js:288
+#, js-format
+msgid "Based on %1$d of %2$d checks."
+msgstr ""
+
+#. translators: %d: number of checks.
+#: assets/src/components/Overview.js:295
+#, js-format
+msgid "%d check didn’t apply to your store."
+msgid_plural "%d checks didn’t apply to your store."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/src/components/Overview.js:366
+msgid "We couldn’t finish checking your site"
+msgstr ""
+
+#: assets/src/components/Overview.js:367
+msgid "We couldn’t finish checking your store"
+msgstr ""
+
+#: assets/src/components/Overview.js:372
+msgid "Your store has more products than your hosting’s memory allows us to check in one go, so we stopped early to keep your site running. We’re not showing a score, because product checks are missing. Your store wasn’t changed."
+msgstr ""
+
+#: assets/src/components/Overview.js:378
+msgid "Running it again at a quiet time may work. If it keeps happening, your host can raise the PHP memory limit for your site."
+msgstr ""
+
+#. translators: 1: checks with an error, 2: all checks.
+#: assets/src/components/Overview.js:389
+#, js-format
+msgid "%1$d of %2$d checks stopped with an error, so we’re not showing a score. A score based on so few checks wouldn’t be reliable."
+msgstr ""
+
+#: assets/src/components/Overview.js:399
+msgid "This is usually caused by a temporary problem or a conflict with another plugin. Your site wasn’t changed."
+msgstr ""
+
+#: assets/src/components/Overview.js:403
+msgid "This is usually caused by a temporary problem or a conflict with another plugin. Your store wasn’t changed."
+msgstr ""
+
+#: assets/src/components/Overview.js:411
+msgid "Details for support"
+msgstr ""
+
+#. translators: %s: list of check names.
+#: assets/src/components/Overview.js:415
+#, js-format
+msgid "Checks that couldn’t run: %s"
+msgstr ""
+
+#: assets/src/components/Overview.js:424
+msgid "Copy details"
+msgstr ""
+
+#: assets/src/components/Overview.js:426
+msgid "Paste these when you ask for help on the support forum."
+msgstr ""
+
+#: assets/src/components/Overview.js:431
+msgid "Support forum"
+msgstr ""
+
+#: assets/src/components/Overview.js:446
+msgid "Add products first"
+msgstr ""
+
+#: assets/src/components/Overview.js:449
+msgid "Your store doesn’t have any published products yet, so there’s nothing for AI assistants to read and no score to show. Once you publish products, run the audit again."
+msgstr ""
+
+#: assets/src/components/Overview.js:456
+msgid "Add a product"
+msgstr ""
+
+#: assets/src/components/Overview.js:461
+msgid "You can already fix your store settings below."
+msgstr ""
+
+#: assets/src/components/Overview.js:495
+msgid "Critical: your site asks search engines and AI assistants to stay away"
+msgstr ""
+
+#: assets/src/components/Overview.js:499
+msgid "This is usually a setting left on by mistake after building a site. It limits your score to 20."
+msgstr ""
+
+#: assets/src/components/Overview.js:509
+msgid "Critical: your store is in “Coming soon” mode"
+msgstr ""
+
+#: assets/src/components/Overview.js:513
+msgid "Shoppers, search engines and AI assistants see a placeholder page instead of your products. You see the normal store only because you’re logged in. This limits your score to 20."
+msgstr ""
+
+#: assets/src/components/Overview.js:520
+msgid "Your other pages are visible, but your shop and product pages are not."
+msgstr ""
+
+#: assets/src/components/Overview.js:532
+msgid "Critical: your crawler rules block all AI search assistants"
+msgstr ""
+
+#: assets/src/components/Overview.js:536
+msgid "Critical: your crawler rules block all AI shopping assistants"
+msgstr ""
+
+#: assets/src/components/Overview.js:541
+msgid "Your robots.txt asks every AI search assistant to stay away from your site. This limits your score to 20."
+msgstr ""
+
+#: assets/src/components/Overview.js:545
+msgid "Your robots.txt asks every AI shopping assistant to stay away from your store. This limits your score to 20."
+msgstr ""
+
+#: assets/src/components/Overview.js:579
+msgid "Show the lines to add"
+msgstr ""
+
+#: assets/src/components/Overview.js:623
+msgid "Top 3 fixes"
+msgstr ""
+
+#: assets/src/components/Overview.js:624
+msgid "Top fixes"
+msgstr ""
+
+#: assets/src/components/Overview.js:629
+msgid "Nothing to fix right now. Your site passes every check we can run on it."
+msgstr ""
+
+#: assets/src/components/Overview.js:633
+msgid "Nothing to fix right now. Your store passes every check we can run on your site."
+msgstr ""
+
+#. translators: %d: score points.
+#: assets/src/components/Overview.js:653
+#, js-format
+msgid "Up to +%d points"
+msgstr ""
+
+#: assets/src/components/Overview.js:676
+#: assets/src/components/Overview.js:680
+msgid "Details"
+msgstr ""
+
+#: assets/src/components/Overview.js:712
+msgid "By category"
+msgstr ""
+
+#: assets/src/components/Overview.js:778
+msgid "An audit is already running, maybe from another tab or another admin. We’ll show the results when it finishes."
+msgstr ""
+
+#: assets/src/components/Overview.js:795
+msgid "The other audit didn’t finish."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:55
+msgid "Enter a number of days from 1 to 365."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:63
+msgid "Enter a number from 0 to 60."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:73
+msgid "Fill in both numbers, or leave both empty."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:82
+msgid "The first number can’t be bigger than the second."
+msgstr ""
+
+#. translators: %s: page title.
+#: assets/src/components/SettingsTab.js:200
+#, js-format
+msgid "We found a page that looks like your returns policy: “%s”."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:217
+msgid "You don’t have any published pages yet."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:226
+msgid "Returns policy page"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:236
+msgid "Only published pages are listed."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:243
+msgid "View page"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:247
+msgid "Create a returns page"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:325
+msgid "Settings aren’t available in this version of x7velo yet."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:329
+msgid "Your settings couldn’t be loaded because the page lost contact with your site. Nothing was changed."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:372
+#: assets/src/components/SettingsTab.js:458
+msgid "Settings saved. Run the audit again to update your score."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:386
+msgid "Check this value."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:391
+msgid "Settings weren’t saved. Check the highlighted fields and try again."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:399
+msgid "Settings weren’t saved because the page lost contact with your site. Try again."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:413
+msgid "x7velo will add this to your product details when “Product details for AI assistants” is on."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:474
+msgid "Shoppers and AI assistants look for a returns policy before recommending a store. Which page explains your returns?"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:494
+msgid "Return window"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:497
+msgid "x7velo adds this to your product details so AI assistants can answer “can I return it?”."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:503
+msgid "How long do customers have to return a product?"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:510
+msgid "Not set (don’t add returns details)"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:517
+msgid "Within a set number of days"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:524
+msgid "Any time, no limit"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:528
+msgid "We don’t accept returns"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:535
+msgid "x7velo adds returns details only when a returns policy page is also chosen above."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:545
+msgid "Number of days"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:549
+msgid "(1–365)"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:561
+msgid "Delivery times"
+msgstr ""
+
+#. translators: %s: country name, e.g. Brazil.
+#: assets/src/components/SettingsTab.js:568
+#, js-format
+msgid "How many days does delivery usually take in %s?"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:574
+msgid "How many days does delivery usually take in your country?"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:580
+msgid "Count from the order to the day it arrives. Leave both empty to not add delivery details."
+msgstr ""
+
+#. translators: Delivery time row, e.g. "From [2] to [5] days (0–60)". Keep the tags; <min /> and <max /> are the two number fields, text inside <from>, <to> and <unit> is shown next to them.
+#: assets/src/components/SettingsTab.js:588
+msgid "<from>From</from> <min /> <to>to</to> <max /> <unit>days (0–60)</unit>"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:598
+msgid "Fastest delivery, in days"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:613
+msgid "Slowest delivery, in days"
+msgstr ""
+
+#. translators: %s: country name, e.g. Brazil.
+#: assets/src/components/SettingsTab.js:648
+#, js-format
+msgid "Added only for products whose shipping to %s is free or a fixed flat rate. Other products are left as they are."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:654
+msgid "Added only for products whose shipping to your country is free or a fixed flat rate. Other products are left as they are."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:668
+msgid "Your products"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:672
+msgid "I make my own products"
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:673
+msgid "Choose this if you sell handmade or own-brand products that don’t have barcodes (GTIN, EAN, UPC). We’ll stop asking for barcodes. We’ll still check that each product has a SKU."
+msgstr ""
+
+#: assets/src/components/SettingsTab.js:690
+msgid "Save settings"
+msgstr ""
+
+#: assets/src/components/StatusLabel.js:27
+msgid "Critical · Needs fixing"
+msgstr ""
+
+#: assets/src/components/StatusLabel.js:32
+msgid "Needs fixing"
+msgstr ""
+
+#: assets/src/components/StatusLabel.js:38
+msgid "Worth improving"
+msgstr ""
+
+#: assets/src/components/StatusLabel.js:45
+msgid "Passed · Fixed by x7velo"
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: assets/src/components/StatusLabel.js:56
+#, js-format
+msgid "Passed · Managed by %s"
+msgstr ""
+
+#: assets/src/components/StatusLabel.js:59
+#: assets/src/components/StatusLabel.js:65
+msgctxt "check status"
+msgid "Passed"
+msgstr ""
+
+#: assets/src/components/StatusLabel.js:71
+msgid "Doesn’t apply"
+msgstr ""
+
+#: assets/src/components/StatusLabel.js:77
+msgid "Couldn’t check"
+msgstr ""
+
+#: assets/src/constants.js:34
+msgid "AI assistants can’t read much of your site yet. Start with the fixes below."
+msgstr ""
+
+#: assets/src/constants.js:41
+msgid "AI assistants can read part of your site. A few fixes will make your pages easier to find and quote."
+msgstr ""
+
+#: assets/src/constants.js:48
+msgid "AI assistants can read your site well. Check again after big changes to your site or plugins."
+msgstr ""
+
+#: assets/src/constants.js:58
+msgid "AI assistants can’t read much of your store yet. Start with the fixes below."
+msgstr ""
+
+#: assets/src/constants.js:65
+msgid "AI assistants can read part of your store. A few fixes will make your products easier to find and quote."
+msgstr ""
+
+#: assets/src/constants.js:72
+msgid "AI assistants can read your store well. Keep product details complete as you add products."
+msgstr ""
+
+#: assets/src/constants.js:110
+msgid "Visibility basics"
+msgstr ""
+
+#: assets/src/constants.js:111
+msgid "Crawler access"
+msgstr ""
+
+#: assets/src/constants.js:112
+msgid "Product information"
+msgstr ""
+
+#: assets/src/constants.js:113
+msgid "Product data quality"
+msgstr ""
+
+#: assets/src/constants.js:114
+msgid "Store trust"
+msgstr ""
+
+#: assets/src/copy/checks.js:32
+msgid "Readable links help assistants, and x7velo needs them to publish your site summary (llms.txt)."
+msgstr ""
+
+#: assets/src/copy/checks.js:39
+msgid "AI assistants can visit"
+msgstr ""
+
+#: assets/src/copy/checks.js:40
+msgid "AI assistants that answer questions can only point people to sites they are allowed to read."
+msgstr ""
+
+#: assets/src/copy/checks.js:44
+msgid "x7velo adds rules that let AI search assistants read your site. Your existing rules stay as they are. You can still block AI training bots: this only lets search assistants in."
+msgstr ""
+
+#: assets/src/copy/checks.js:51
+msgid "A sitemap is the list assistants use to find all your posts and pages."
+msgstr ""
+
+#: assets/src/copy/checks.js:56
+#: assets/src/copy/checks.js:186
+msgid "Open your sitemap settings."
+msgstr ""
+
+#: assets/src/copy/checks.js:57
+msgid "Make sure the sitemap is on and includes posts and pages, then save."
+msgstr ""
+
+#: assets/src/copy/checks.js:65
+#: assets/src/copy/dialogs.js:75
+msgid "Site summary for AI"
+msgstr ""
+
+#: assets/src/copy/checks.js:66
+msgid "An llms.txt file gives AI assistants a short summary of your site, its main pages and recent posts."
+msgstr ""
+
+#: assets/src/copy/checks.js:70
+msgid "x7velo publishes a short site summary at /llms.txt. It only lists things already public on your site. You can turn it off any time on the Fixes tab."
+msgstr ""
+
+#: assets/src/copy/checks.js:85
+msgid "Discourage search engines from indexing this site"
+msgstr ""
+
+#: assets/src/copy/checks.js:86
+msgid "Save Changes"
+msgstr ""
+
+#: assets/src/copy/checks.js:87
+msgid "Post name"
+msgstr ""
+
+#: assets/src/copy/checks.js:91
+msgid "Visible to search engines"
+msgstr ""
+
+#: assets/src/copy/checks.js:92
+msgid "search visibility"
+msgstr ""
+
+#: assets/src/copy/checks.js:93
+msgid "Your site is telling every search engine and AI assistant to stay away. This is usually left on by mistake after building the site."
+msgstr ""
+
+#. translators: %s: WordPress core checkbox label, e.g. "Discourage search engines from indexing this site".
+#: assets/src/copy/checks.js:100
+#, js-format
+msgid "In Settings → Reading, untick “%s”."
+msgstr ""
+
+#. translators: %s: WordPress core button label "Save Changes".
+#: assets/src/copy/checks.js:105
+#, js-format
+msgid "Click “%s”."
+msgstr ""
+
+#: assets/src/copy/checks.js:111
+msgid "Secure address (https)"
+msgstr ""
+
+#: assets/src/copy/checks.js:112
+msgid "HTTPS"
+msgstr ""
+
+#: assets/src/copy/checks.js:113
+msgid "Browsers and AI assistants treat addresses that start with http:// as less safe."
+msgstr ""
+
+#: assets/src/copy/checks.js:118
+msgid "Ask your host to turn on a free SSL certificate for your site."
+msgstr ""
+
+#: assets/src/copy/checks.js:122
+msgid "Ask them to change your site address to start with https:// too."
+msgstr ""
+
+#: assets/src/copy/checks.js:129
+msgid "Readable links"
+msgstr ""
+
+#: assets/src/copy/checks.js:130
+msgid "permalinks"
+msgstr ""
+
+#: assets/src/copy/checks.js:131
+msgid "Readable links help assistants, and x7velo needs them to publish your store summary (llms.txt)."
+msgstr ""
+
+#: assets/src/copy/checks.js:136
+msgid "Go to Settings → Permalinks."
+msgstr ""
+
+#. translators: 1: WordPress core option label "Post name", 2: core button label "Save Changes".
+#: assets/src/copy/checks.js:139
+#, js-format
+msgid "Choose “%1$s”, then click “%2$s”."
+msgstr ""
+
+#: assets/src/copy/checks.js:146
+msgid "Store is open to visitors"
+msgstr ""
+
+#: assets/src/copy/checks.js:147
+msgid "coming soon mode"
+msgstr ""
+
+#: assets/src/copy/checks.js:148
+msgid "You see the normal store only because you’re logged in."
+msgstr ""
+
+#: assets/src/copy/checks.js:153
+msgid "In WooCommerce → Settings → Site visibility, choose “Live”."
+msgstr ""
+
+#: assets/src/copy/checks.js:157
+#: assets/src/copy/checks.js:390
+msgid "Click “Save changes”."
+msgstr ""
+
+#: assets/src/copy/checks.js:161
+msgid "AI shopping assistants can visit"
+msgstr ""
+
+#: assets/src/copy/checks.js:162
+msgid "AI crawler rules"
+msgstr ""
+
+#: assets/src/copy/checks.js:163
+msgid "AI assistants that recommend products can only suggest stores they are allowed to read."
+msgstr ""
+
+#: assets/src/copy/checks.js:168
+msgid "Ask your host or developer to add the lines shown on the Fixes tab to the robots.txt file in your site’s main folder."
+msgstr ""
+
+#: assets/src/copy/checks.js:173
+msgid "x7velo adds rules that let AI shopping assistants read your shop. Your existing rules stay as they are. You can still block AI training bots: this only lets shopping and search assistants in."
+msgstr ""
+
+#: assets/src/copy/checks.js:180
+msgid "sitemap"
+msgstr ""
+
+#: assets/src/copy/checks.js:181
+msgid "A sitemap is the list assistants use to find all your products."
+msgstr ""
+
+#: assets/src/copy/checks.js:187
+msgid "Make sure the sitemap is on and includes products, then save."
+msgstr ""
+
+#: assets/src/copy/checks.js:192
+msgid "x7velo adds a line to your robots.txt that points assistants to your sitemap, as part of its crawler rules."
+msgstr ""
+
+#: assets/src/copy/checks.js:198
+#: assets/src/copy/dialogs.js:368
+msgid "Store summary for AI"
+msgstr ""
+
+#: assets/src/copy/checks.js:199
+msgid "llms.txt"
+msgstr ""
+
+#: assets/src/copy/checks.js:200
+msgid "An llms.txt file gives AI assistants a short summary of your store, categories and products."
+msgstr ""
+
+#: assets/src/copy/checks.js:205
+msgid "Turn on the llms.txt feature of your SEO plugin, or let x7velo publish one."
+msgstr ""
+
+#: assets/src/copy/checks.js:210
+msgid "x7velo publishes a short store summary at /llms.txt. It only lists things already public on your site. You can turn it off any time on the Fixes tab."
+msgstr ""
+
+#: assets/src/copy/checks.js:216
+msgid "Product list for shopping assistants"
+msgstr ""
+
+#: assets/src/copy/checks.js:217
+msgid "product feed"
+msgstr ""
+
+#: assets/src/copy/checks.js:218
+msgid "Shopping assistants use product feeds to read prices and stock without visiting every page."
+msgstr ""
+
+#: assets/src/copy/checks.js:223
+msgid "Turn on a product feed, for example x7velo’s product feed on the Fixes tab."
+msgstr ""
+
+#: assets/src/copy/checks.js:228
+msgid "x7velo publishes a list of your products, with prices and stock, at a public address. You can turn it off any time on the Fixes tab."
+msgstr ""
+
+#: assets/src/copy/checks.js:236
+msgid "Without product details, assistants have to guess your prices and stock, or skip you."
+msgstr ""
+
+#: assets/src/copy/checks.js:240
+msgid "When the details appear twice, assistants may read the wrong price."
+msgstr ""
+
+#: assets/src/copy/checks.js:245
+msgid "x7velo adds this information to each product page. You can turn it off any time on the Fixes tab."
+msgstr ""
+
+#: assets/src/copy/checks.js:251
+msgid "Prices"
+msgstr ""
+
+#: assets/src/copy/checks.js:252
+msgid "price"
+msgstr ""
+
+#: assets/src/copy/checks.js:253
+msgid "AI assistants skip products they can’t quote a price for."
+msgstr ""
+
+#: assets/src/copy/checks.js:258
+#: assets/src/copy/checks.js:274
+#: assets/src/copy/checks.js:287
+#: assets/src/copy/checks.js:303
+#: assets/src/copy/checks.js:319
+msgid "Open each product below."
+msgstr ""
+
+#: assets/src/copy/checks.js:259
+msgid "In “Product data”, fill in “Regular price”. For variable products, set a price on each variation."
+msgstr ""
+
+#: assets/src/copy/checks.js:263
+#: assets/src/copy/checks.js:276
+#: assets/src/copy/checks.js:292
+#: assets/src/copy/checks.js:308
+#: assets/src/copy/checks.js:324
+msgid "Update the product, then run the audit again."
+msgstr ""
+
+#: assets/src/copy/checks.js:267
+msgid "Main images"
+msgstr ""
+
+#: assets/src/copy/checks.js:268
+msgid "image"
+msgstr ""
+
+#: assets/src/copy/checks.js:269
+msgid "Assistants and shopping results show products with a picture first."
+msgstr ""
+
+#: assets/src/copy/checks.js:275
+msgid "In the “Product image” box, choose an image."
+msgstr ""
+
+#: assets/src/copy/checks.js:280
+msgid "Descriptions"
+msgstr ""
+
+#: assets/src/copy/checks.js:281
+msgid "description"
+msgstr ""
+
+#: assets/src/copy/checks.js:282
+msgid "Assistants quote your description to explain what a product is. Very short descriptions give them little to say."
+msgstr ""
+
+#: assets/src/copy/checks.js:288
+msgid "Write at least a few sentences (150 characters or more) in the description or short description."
+msgstr ""
+
+#: assets/src/copy/checks.js:296
+msgid "Barcodes and brands"
+msgstr ""
+
+#: assets/src/copy/checks.js:297
+msgid "identifiers"
+msgstr ""
+
+#: assets/src/copy/checks.js:298
+msgid "A SKU plus a barcode (GTIN, EAN, UPC) or a brand helps assistants match your product to what shoppers ask for."
+msgstr ""
+
+#: assets/src/copy/checks.js:304
+msgid "In “Product data” → “Inventory”, fill in the SKU and the barcode (GTIN, UPC, EAN or ISBN), or choose a brand."
+msgstr ""
+
+#: assets/src/copy/checks.js:312
+msgid "Categories"
+msgstr ""
+
+#: assets/src/copy/checks.js:313
+msgid "categories"
+msgstr ""
+
+#: assets/src/copy/checks.js:314
+msgid "Categories help assistants understand what you sell."
+msgstr ""
+
+#: assets/src/copy/checks.js:320
+msgid "In the “Product categories” box, tick a category."
+msgstr ""
+
+#: assets/src/copy/checks.js:328
+msgid "Store details"
+msgstr ""
+
+#: assets/src/copy/checks.js:329
+msgid "identity"
+msgstr ""
+
+#: assets/src/copy/checks.js:330
+msgid "Assistants check who is behind a store before recommending it."
+msgstr ""
+
+#: assets/src/copy/checks.js:335
+msgid "In WooCommerce → Settings → General, fill in your store address, country and currency."
+msgstr ""
+
+#: assets/src/copy/checks.js:339
+msgid "In Settings → General, check your site title and email address."
+msgstr ""
+
+#: assets/src/copy/checks.js:347
+msgid "returns policy"
+msgstr ""
+
+#: assets/src/copy/checks.js:348
+msgid "Shoppers and AI assistants look for a returns policy before recommending a store."
+msgstr ""
+
+#: assets/src/copy/checks.js:353
+msgid "Publish a page that explains your returns, if you don’t have one."
+msgstr ""
+
+#: assets/src/copy/checks.js:357
+msgid "Choose it as your returns page on the Settings tab."
+msgstr ""
+
+#: assets/src/copy/checks.js:364
+msgid "Shipping"
+msgstr ""
+
+#: assets/src/copy/checks.js:365
+msgid "shipping"
+msgstr ""
+
+#: assets/src/copy/checks.js:366
+msgid "Assistants tell shoppers whether you ship to them. Without shipping options, they can’t."
+msgstr ""
+
+#: assets/src/copy/checks.js:371
+msgid "Go to WooCommerce → Settings → Shipping."
+msgstr ""
+
+#: assets/src/copy/checks.js:372
+msgid "Add a shipping zone for your country with at least one shipping method."
+msgstr ""
+
+#: assets/src/copy/checks.js:379
+msgid "Guest checkout"
+msgstr ""
+
+#: assets/src/copy/checks.js:380
+msgid "guest checkout"
+msgstr ""
+
+#: assets/src/copy/checks.js:381
+msgid "Some shoppers and buying assistants skip stores that require an account. This is your choice. Some stores need accounts."
+msgstr ""
+
+#: assets/src/copy/checks.js:386
+msgid "In WooCommerce → Settings → Accounts & Privacy, allow customers to place orders without an account."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:34
+msgid "Crawler rules for AI search assistants"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:38
+msgid "Let AI search assistants read your site?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:43
+msgid "x7velo will add rules to your robots.txt that allow assistants like ChatGPT search and Perplexity to read your site and find your sitemap. Your existing rules stay as they are. You can turn this off at any time on the Fixes tab."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:48
+msgid "Allow search assistants"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:55
+msgid "This asks bots that collect content to train AI models, such as GPTBot and CCBot, not to read your site. It doesn’t block search assistants and doesn’t change your score. Most well-known bots follow these rules, but it isn’t a lock."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:65
+msgid "This asks Google not to use your content to train its Gemini models. Blocking it can reduce your site’s visibility in the Gemini app. Google Search, AI Overviews and AI Mode are not affected. It doesn’t change your score."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:79
+msgid "Publish a site summary?"
+msgstr ""
+
+#. translators: %s: address of the llms.txt file.
+#: assets/src/copy/dialogs.js:83
+#, js-format
+msgid "x7velo will publish a short file at %s that lists your main pages and recent posts. Anyone can open it, but it only contains things already public on your site."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:93
+msgid "Remove your site summary?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:117
+#: assets/src/copy/dialogs.js:145
+msgid "Crawler rules for AI shopping assistants"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:121
+msgid "Let AI shopping assistants read your store?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:126
+msgid "x7velo will add rules to your robots.txt that allow assistants like ChatGPT search and Perplexity to read your shop and find your sitemap. Your existing rules stay as they are. You can turn this off at any time on the Fixes tab."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:135
+msgid "Allow shopping assistants"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:149
+msgid "Remove x7velo’s crawler rules?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:151
+msgid "Your robots.txt goes back to how it was before. Assistants that your other rules block will be blocked again."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:156
+msgid "Remove rules"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:165
+#: assets/src/copy/dialogs.js:185
+msgid "Blocking AI training bots"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:166
+msgid "Block AI training bots?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:168
+msgid "This asks bots that collect content to train AI models, such as GPTBot and CCBot, not to read your site. It doesn’t block shopping assistants and doesn’t change your score. Most well-known bots follow these rules, but it isn’t a lock."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:179
+msgid "Block training bots"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:186
+msgid "Stop blocking AI training bots?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:191
+msgid "Bots that collect content to train AI models will be allowed to read your site again, unless your other rules block them."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:196
+#: assets/src/copy/dialogs.js:226
+#: assets/src/copy/dialogs.js:294
+msgid "Stop blocking"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:204
+#: assets/src/copy/dialogs.js:218
+msgid "Blocking Google-Extended"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:205
+msgid "Block Google-Extended?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:207
+msgid "This asks Google not to use your content to train its Gemini models. Blocking it can reduce your store’s visibility in the Gemini app. Google Search, AI Overviews and AI Mode are not affected. It doesn’t change your score."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:212
+msgid "Block Google-Extended"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:219
+msgid "Stop blocking Google-Extended?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:221
+msgid "Google will be allowed to use your content for its Gemini models again, unless your other rules block it."
+msgstr ""
+
+#. translators: %s: bot name, e.g. Bytespider.
+#: assets/src/copy/dialogs.js:244
+#: assets/src/copy/dialogs.js:276
+#, js-format
+msgid "Blocking %s"
+msgstr ""
+
+#. translators: 1: bot name, e.g. Bytespider, 2: company, e.g. ByteDance. "EXPERIMENTAL" is a label.
+#: assets/src/copy/dialogs.js:249
+#, js-format
+msgid "Block %1$s (%2$s)? EXPERIMENTAL"
+msgstr ""
+
+#. translators: 1: bot name, e.g. Bytespider, 2: company, e.g. ByteDance.
+#: assets/src/copy/dialogs.js:256
+#, js-format
+msgid "This asks %1$s not to read your site. %2$s doesn’t publish official details about this bot, and it may not follow these rules. It doesn’t change your score."
+msgstr ""
+
+#. translators: %s: bot name, e.g. Bytespider.
+#: assets/src/copy/dialogs.js:266
+#, js-format
+msgid "Block %s"
+msgstr ""
+
+#. translators: %s: bot name, e.g. Bytespider.
+#: assets/src/copy/dialogs.js:281
+#, js-format
+msgid "Stop blocking %s?"
+msgstr ""
+
+#. translators: %s: bot name, e.g. Bytespider.
+#: assets/src/copy/dialogs.js:287
+#, js-format
+msgid "%s will be allowed to read your site again, unless your other rules block it."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:304
+msgid "Stop adding product details?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:306
+msgid "Your product pages go back to how they were before."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:311
+msgid "Stop adding"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:319
+msgid "Add product details to your product pages?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:324
+msgid "x7velo will add price, stock and other product details to each product page in a format AI assistants read. Nothing visible on your pages changes."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:329
+msgid "Add product details"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:335
+msgid "x7velo will add your returns policy and delivery times to the product information WooCommerce already puts on your product pages. Nothing visible on your pages changes."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:342
+msgid "Returns policy will be added once you set it in Settings."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:350
+msgid "Delivery times will be added once you set them in Settings."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:359
+msgid "Add returns policy and delivery times?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:361
+msgid "Add details"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:373
+msgid "Publish a store summary?"
+msgstr ""
+
+#. translators: %s: address of the llms.txt file.
+#: assets/src/copy/dialogs.js:377
+#, js-format
+msgid "x7velo will publish a short file at %s that lists your shop pages, categories and products. Anyone can open it, but it only contains things already public on your site."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:384
+msgid "Publish summary"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:390
+msgid "Remove your store summary?"
+msgstr ""
+
+#. translators: %s: address of the llms.txt file.
+#: assets/src/copy/dialogs.js:394
+#, js-format
+msgid "The file at %s will stop working."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:401
+msgid "Remove summary"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:409
+msgid "x7velo will publish a list of your products, with prices and stock, at a public address. It only contains things already public on your site."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:420
+msgid "Publish a product feed?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:422
+msgid "Publish feed"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:429
+msgid "Stop your product feed?"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:431
+msgid "The feed address will stop working. If you gave it to Google or another service, they’ll stop getting updates."
+msgstr ""
+
+#: assets/src/copy/dialogs.js:436
+msgid "Stop feed"
+msgstr ""
+
+#: assets/src/copy/dialogs.js:445
+msgid "If you already use Google for WooCommerce, you don’t need to send this feed to Google Merchant Center."
+msgstr ""
+
+#: assets/src/copy/fixers.js:50
+msgid "This option isn’t available in this version of x7velo yet."
+msgstr ""
+
+#: assets/src/copy/fixers.js:66
+msgid "Your site is set to discourage search engines (Settings → Reading). x7velo won’t add crawler rules that go against that setting. Change it first, then come back here."
+msgstr ""
+
+#. translators: %s: main site address, e.g. example.com.
+#: assets/src/copy/fixers.js:73
+#, js-format
+msgid "Your robots.txt is managed by the main site at %s. x7velo can’t add rules to it from here."
+msgstr ""
+
+#: assets/src/copy/fixers.js:80
+msgid "Needs readable links first. Change to “Post name” in Settings → Permalinks."
+msgstr ""
+
+#: assets/src/copy/fixers.js:85
+msgid "Your store is in “Coming soon” mode (WooCommerce → Settings → Site visibility), so x7velo keeps this private until your store is live."
+msgstr ""
+
+#: assets/src/copy/fixers.js:90
+msgid "Another plugin is hiding your store from visitors right now, so x7velo keeps this private too."
+msgstr ""
+
+#: assets/src/copy/fixers.js:95
+msgid "A setting on your site prevents this right now."
+msgstr ""
+
+#. translators: %s: file name, e.g. llms.txt.
+#: assets/src/copy/fixers.js:112
+#, js-format
+msgid "Managed by a file on your server (%s)."
+msgstr ""
+
+#. translators: %s: plugin name, e.g. "Yoast SEO".
+#: assets/src/copy/fixers.js:118
+#, js-format
+msgid "Managed by %s."
+msgstr ""

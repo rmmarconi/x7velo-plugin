@@ -1,0 +1,361 @@
+{
+    "schema_version": 2,
+    "generated_at": "2026-11-23T12:00:00+00:00",
+    "plugin_version": "0.1.0",
+    "woocommerce_active": true,
+    "state": "complete",
+    "score": 62,
+    "band": "medium",
+    "capped": false,
+    "complete": true,
+    "counts": {
+        "pass": 9,
+        "warn": 2,
+        "fail": 7,
+        "not_applicable": 0,
+        "error": 0
+    },
+    "checks": [
+        {
+            "id": "VIS-01",
+            "category": "visibility",
+            "weight": 10,
+            "status": "pass",
+            "code": "search_engines_allowed",
+            "details": {},
+            "fixer": "guided",
+            "guided_path": "options-reading.php",
+            "critical": false,
+            "points_available": 0,
+            "message": "Search engines and AI assistants are allowed to read your site.",
+            "guided_url": "https://example.com/wp-admin/options-reading.php"
+        },
+        {
+            "id": "VIS-02",
+            "category": "visibility",
+            "weight": 5,
+            "status": "fail",
+            "code": "https_off",
+            "details": {
+                "home_https": false,
+                "siteurl_https": false,
+                "site_kind": "store"
+            },
+            "fixer": "manual",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 5,
+            "message": "Your store address starts with http://, not https://. Many assistants and browsers treat that as unsafe. Ask your host to turn on a free SSL certificate.",
+            "guided_url": ""
+        },
+        {
+            "id": "VIS-03",
+            "category": "visibility",
+            "weight": 4,
+            "status": "fail",
+            "code": "plain_links",
+            "details": {
+                "site_kind": "store"
+            },
+            "fixer": "guided",
+            "guided_path": "options-permalink.php",
+            "critical": false,
+            "points_available": 4,
+            "message": "Your product links look like ?p=123. Readable links help assistants and are needed for llms.txt. Change to “Post name” in Settings → Permalinks.",
+            "guided_url": "https://example.com/wp-admin/options-permalink.php"
+        },
+        {
+            "id": "VIS-04",
+            "category": "visibility",
+            "weight": 4,
+            "status": "pass",
+            "code": "store_live",
+            "details": {},
+            "fixer": "guided",
+            "guided_path": "admin.php?page=wc-settings&tab=site-visibility",
+            "critical": false,
+            "points_available": 0,
+            "message": "Your store is live, so shoppers, search engines and AI assistants can see it.",
+            "guided_url": "https://example.com/wp-admin/admin.php?page=wc-settings&tab=site-visibility"
+        },
+        {
+            "id": "CRAWL-01",
+            "category": "crawl",
+            "weight": 10,
+            "status": "pass",
+            "code": "search_crawlers_allowed",
+            "details": {
+                "source": "filter",
+                "physical_file": false,
+                "scored_count": 17,
+                "blocked_count": 0,
+                "blocked": [],
+                "owner_named": [],
+                "may_still_visit": [],
+                "fixable_count": 0,
+                "training_blocked_count": 0,
+                "x7velo_block": false,
+                "site_kind": "store"
+            },
+            "fixer": "robots",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 0,
+            "message": "AI shopping assistants can read your store.",
+            "guided_url": ""
+        },
+        {
+            "id": "CRAWL-02",
+            "category": "crawl",
+            "weight": 5,
+            "status": "warn",
+            "code": "sitemap_not_referenced",
+            "details": {
+                "provider": "core",
+                "source": "WordPress",
+                "sitemap_path": "/wp-sitemap.xml",
+                "site_kind": "store",
+                "robots_checked": true,
+                "physical_file": false
+            },
+            "fixer": "robots",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 3,
+            "message": "Your sitemap works, but your robots.txt doesn’t point to it, so assistants may not find it.",
+            "guided_url": ""
+        },
+        {
+            "id": "CRAWL-03",
+            "category": "crawl",
+            "weight": 5,
+            "status": "fail",
+            "code": "no_llms_txt",
+            "details": {
+                "site_kind": "store"
+            },
+            "fixer": "llms-txt",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 5,
+            "message": "You don’t have an llms.txt file, a short summary of your store that AI assistants can read.",
+            "guided_url": ""
+        },
+        {
+            "id": "CRAWL-04",
+            "category": "crawl",
+            "weight": 5,
+            "status": "fail",
+            "code": "no_feed",
+            "details": {},
+            "fixer": "feed",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 5,
+            "message": "You don’t have a product feed. A feed gives shopping assistants your full product list with prices and stock in one file.",
+            "guided_url": ""
+        },
+        {
+            "id": "SCHEMA-01",
+            "category": "schema",
+            "weight": 10,
+            "status": "pass",
+            "code": "product_schema_woocommerce",
+            "details": {
+                "source": "woocommerce",
+                "runtime": "none",
+                "jsonld_mode": "augment"
+            },
+            "fixer": "json-ld",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 0,
+            "message": "Your product pages include product details AI assistants can read (from WooCommerce).",
+            "guided_url": ""
+        },
+        {
+            "id": "DATA-01",
+            "category": "data",
+            "weight": 8,
+            "status": "pass",
+            "code": "all_priced",
+            "details": {
+                "products": 5,
+                "ok": 5,
+                "missing": 0,
+                "percent": 100,
+                "examples": [],
+                "variations_without_price": 0
+            },
+            "fixer": "manual",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 0,
+            "message": "All your products have a price.",
+            "guided_url": ""
+        },
+        {
+            "id": "DATA-02",
+            "category": "data",
+            "weight": 6,
+            "status": "fail",
+            "code": "missing_image",
+            "details": {
+                "products": 5,
+                "ok": 3,
+                "missing": 2,
+                "percent": 60,
+                "examples": [
+                    {
+                        "id": 101,
+                        "title": "Product 101",
+                        "edit_url": "https://example.com/wp-admin/post.php?post=101&action=edit"
+                    },
+                    {
+                        "id": 102,
+                        "title": "Product 102",
+                        "edit_url": "https://example.com/wp-admin/post.php?post=102&action=edit"
+                    }
+                ]
+            },
+            "fixer": "manual",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 6,
+            "message": "2 products have no main image.",
+            "guided_url": ""
+        },
+        {
+            "id": "DATA-03",
+            "category": "data",
+            "weight": 6,
+            "status": "pass",
+            "code": "all_described",
+            "details": {
+                "products": 5,
+                "ok": 5,
+                "missing": 0,
+                "percent": 100,
+                "examples": []
+            },
+            "fixer": "manual",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 0,
+            "message": "All your products have a useful description.",
+            "guided_url": ""
+        },
+        {
+            "id": "DATA-04",
+            "category": "data",
+            "weight": 4,
+            "status": "pass",
+            "code": "identifiers_ok",
+            "details": {
+                "products": 5,
+                "ok": 5,
+                "missing": 0,
+                "percent": 100,
+                "examples": [],
+                "with_sku": 5,
+                "with_gtin": 5,
+                "with_brand": 5,
+                "own_brand_products": false
+            },
+            "fixer": "manual",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 0,
+            "message": "Most of your products have the codes assistants use to match them.",
+            "guided_url": ""
+        },
+        {
+            "id": "DATA-05",
+            "category": "data",
+            "weight": 2,
+            "status": "pass",
+            "code": "all_categorized",
+            "details": {
+                "products": 5,
+                "ok": 5,
+                "missing": 0,
+                "percent": 100,
+                "examples": []
+            },
+            "fixer": "manual",
+            "guided_path": "",
+            "critical": false,
+            "points_available": 0,
+            "message": "All your products are in a category.",
+            "guided_url": ""
+        },
+        {
+            "id": "STORE-01",
+            "category": "store",
+            "weight": 5,
+            "status": "warn",
+            "code": "store_address_missing",
+            "details": {
+                "has_site_title": true,
+                "has_address": false,
+                "has_country": true,
+                "has_currency": true,
+                "has_email": true
+            },
+            "fixer": "guided",
+            "guided_path": "admin.php?page=wc-settings&tab=general",
+            "critical": false,
+            "points_available": 3,
+            "message": "Assistants trust stores that say who they are and where they ship from. Add your store address in WooCommerce → Settings → General.",
+            "guided_url": "https://example.com/wp-admin/admin.php?page=wc-settings&tab=general"
+        },
+        {
+            "id": "STORE-02",
+            "category": "store",
+            "weight": 5,
+            "status": "fail",
+            "code": "no_returns_page",
+            "details": {
+                "suggested_page_id": 0
+            },
+            "fixer": "guided",
+            "guided_path": "admin.php?page=x7velo",
+            "critical": false,
+            "points_available": 5,
+            "message": "Shoppers and assistants look for a returns policy before recommending a store. Pick your returns page, or create one.",
+            "guided_url": "https://example.com/wp-admin/admin.php?page=x7velo"
+        },
+        {
+            "id": "STORE-03",
+            "category": "store",
+            "weight": 3,
+            "status": "fail",
+            "code": "no_shipping",
+            "details": {
+                "physical_products": 5,
+                "zones_with_methods": 0,
+                "covers_base": false
+            },
+            "fixer": "guided",
+            "guided_path": "admin.php?page=wc-settings&tab=shipping",
+            "critical": false,
+            "points_available": 3,
+            "message": "No shipping options are set up, so assistants can’t tell shoppers if you deliver to them. Add a shipping zone in WooCommerce → Settings → Shipping.",
+            "guided_url": "https://example.com/wp-admin/admin.php?page=wc-settings&tab=shipping"
+        },
+        {
+            "id": "STORE-04",
+            "category": "store",
+            "weight": 3,
+            "status": "pass",
+            "code": "guest_checkout_on",
+            "details": {},
+            "fixer": "guided",
+            "guided_path": "admin.php?page=wc-settings&tab=account",
+            "critical": false,
+            "points_available": 0,
+            "message": "Shoppers can buy without creating an account.",
+            "guided_url": "https://example.com/wp-admin/admin.php?page=wc-settings&tab=account"
+        }
+    ]
+}

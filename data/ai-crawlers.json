@@ -1,0 +1,277 @@
+{
+	"schema": 1,
+	"updated": "2026-11-22",
+	"agents": [
+		{
+			"token": "OAI-SearchBot",
+			"operator": "OpenAI",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Finds pages to show and link in ChatGPT search answers. Not described as a training crawler. Sites that block it will not appear in ChatGPT search answers (they may still show as plain navigational links). Changes can take about 24 hours.",
+			"source": "https://developers.openai.com/api/docs/bots",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "ChatGPT-User",
+			"operator": "OpenAI",
+			"purpose": "user",
+			"affects_score": true,
+			"respects_robots": false,
+			"notes": "Visits a page when a ChatGPT user or a Custom GPT asks for it. OpenAI says robots.txt rules may not apply because a person started the request. Not used for automatic crawling or for deciding search eligibility.",
+			"source": "https://developers.openai.com/api/docs/bots",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "GPTBot",
+			"operator": "OpenAI",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "Collects content that may be used to train OpenAI models. Blocking it does not affect OAI-SearchBot because OpenAI says each setting is independent.",
+			"source": "https://developers.openai.com/api/docs/bots",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Claude-SearchBot",
+			"operator": "Anthropic",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Indexes pages so Claude can give better search results. Anthropic says blocking it may reduce a site's visibility and accuracy in user search results.",
+			"source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Claude-User",
+			"operator": "Anthropic",
+			"purpose": "user",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Fetches a page when a person asks Claude a question. Anthropic says its bots honor robots.txt and that blocking it stops Claude from fetching the site for user requests.",
+			"source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "ClaudeBot",
+			"operator": "Anthropic",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "Collects content that may be used to train Claude models. Blocking it only opts future content out of training. Anthropic also honors the IETF aipref 'no AI training' signal from 2026-10-30, but a robots.txt rule that names ClaudeBot takes priority.",
+			"source": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "PerplexityBot",
+			"operator": "Perplexity",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Finds and links websites in Perplexity search results. Perplexity says it is not used to crawl content for AI foundation models and asks sites to allow it in robots.txt to appear in results.",
+			"source": "https://docs.perplexity.ai/guides/bots",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Perplexity-User",
+			"operator": "Perplexity",
+			"purpose": "user",
+			"affects_score": true,
+			"respects_robots": false,
+			"notes": "Visits a page when a Perplexity user asks a question and may link it in the answer. Perplexity says it generally ignores robots.txt because a user requested the fetch. Not used for training.",
+			"source": "https://docs.perplexity.ai/guides/bots",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Googlebot",
+			"operator": "Google",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Google Search crawler. Pages must be crawlable by Googlebot and indexed to appear in Google Search, including AI Overviews and AI Mode. Blocking it removes the store from Google Search.",
+			"source": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Google-Agent",
+			"operator": "Google",
+			"purpose": "user",
+			"affects_score": true,
+			"respects_robots": false,
+			"notes": "Lets AI agents running on Google infrastructure browse sites and take actions when a user asks. Google says user-triggered fetchers generally ignore robots.txt.",
+			"source": "https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Google-Extended",
+			"operator": "Google",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "A robots.txt control token, not a crawler: Google crawls with its normal crawlers. Controls use for Gemini model training AND for grounding answers in the Gemini app and Vertex AI. Does not affect Google Search inclusion or ranking. Blocking it can reduce visibility in Gemini answers.",
+			"source": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Applebot",
+			"operator": "Apple",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Powers search in Siri, Spotlight and Safari and can supply context for AI answers in Siri and Search. Apple says its data may also be used to train Apple models; opt out of training with Applebot-Extended, not by blocking Applebot. If robots.txt does not name Applebot, it follows the Googlebot rules.",
+			"source": "https://support.apple.com/en-us/119829",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Applebot-Extended",
+			"operator": "Apple",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "A robots.txt control token, not a crawler: Apple says it does not crawl pages. Blocking it opts content out of training Apple foundation models. Apple says pages that block it can still appear in search results and it is not used for ranking.",
+			"source": "https://support.apple.com/en-us/119829",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Bingbot",
+			"operator": "Microsoft",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Bing's crawler. Microsoft's webmaster guidelines say Bing and Copilot rely on the same crawling and indexing, and blocking Bingbot can make content ineligible for Copilot and grounding answers. Microsoft does not officially state which third-party assistants use Bing results.",
+			"source": "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "meta-webindexer",
+			"operator": "Meta",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Crawls to improve Meta AI search results. Meta says allowing it helps Meta AI cite and link your content in answers.",
+			"source": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "meta-externalfetcher",
+			"operator": "Meta",
+			"purpose": "user",
+			"affects_score": true,
+			"respects_robots": false,
+			"notes": "Fetches individual links when a user asks, including for agentic AI features. Meta says it may bypass robots.txt because the user requested the fetch.",
+			"source": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "meta-externalagent",
+			"operator": "Meta",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "Mixed use: Meta says it crawls for training foundation AI models or for improving products by indexing content directly. Meta AI search citations use meta-webindexer instead.",
+			"source": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Amzn-SearchBot",
+			"operator": "Amazon",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Crawls for Amazon search experiences such as Alexa. Amazon says it is not used for generative AI training. If no robots.txt rule names it, it follows the rules for other allowed search bots.",
+			"source": "https://developer.amazon.com/amazonbot",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Amzn-User",
+			"operator": "Amazon",
+			"purpose": "user",
+			"affects_score": true,
+			"respects_robots": false,
+			"notes": "Fetches pages when a user asks, for example to answer an Alexa question with current information. Amazon says it may not follow all robots.txt rules. Not used for training.",
+			"source": "https://developer.amazon.com/amazonbot",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Amazonbot",
+			"operator": "Amazon",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "Mixed use: improves Amazon products and services, including more accurate customer answers, and may be used to train Amazon AI models. Amazon search uses Amzn-SearchBot instead.",
+			"source": "https://developer.amazon.com/amazonbot",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "DuckAssistBot",
+			"operator": "DuckDuckGo",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": true,
+			"notes": "Fetches pages in real time for DuckDuckGo's AI-assisted answers, which cite sources. DuckDuckGo says the data is not used to train AI models and opting out does not affect organic rankings. Changes take effect after 72 hours.",
+			"source": "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "MistralAI-Index",
+			"operator": "Mistral AI",
+			"purpose": "search",
+			"affects_score": true,
+			"respects_robots": "unclear",
+			"notes": "Indexes pages for Mistral search, which powers answers in Mistral's assistant. Mistral says the content is not used for AI training. The page does not say explicitly whether this agent obeys robots.txt.",
+			"source": "https://docs.mistral.ai/robots",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "MistralAI-User",
+			"operator": "Mistral AI",
+			"purpose": "user",
+			"affects_score": true,
+			"respects_robots": "unclear",
+			"notes": "Visits a page when a user asks Mistral's assistant a question and links the source. Not used for automatic crawling or training. The page does not say explicitly whether this agent obeys robots.txt.",
+			"source": "https://docs.mistral.ai/robots",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "MistralAI-Training",
+			"operator": "Mistral AI",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "Builds datasets to train Mistral models. Not used for search indexing or live answers. Mistral says it can be blocked in robots.txt.",
+			"source": "https://docs.mistral.ai/robots",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "CCBot",
+			"operator": "Common Crawl",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "Builds Common Crawl's free public web archive. The operator does not describe it as an AI training crawler, but the archive is a common source of AI training data, so x7velo groups it with training bots. Does not power any assistant's live search.",
+			"source": "https://commoncrawl.org/ccbot",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "__usage_ai-training",
+			"operator": "Shared standard (IETF aipref draft)",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": true,
+			"notes": "Not a crawler: a shared robots.txt usage token meaning 'do not use for AI training'. Microsoft honors it from 2027-02-01 and Google says it plans support in early 2027. The draft may change. Bots that do not support it ignore it.",
+			"source": "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+			"verified": "2026-11-22"
+		},
+		{
+			"token": "Bytespider",
+			"operator": "ByteDance",
+			"purpose": "training",
+			"affects_score": false,
+			"respects_robots": "unclear",
+			"notes": "EXPERIMENTAL: no official ByteDance documentation found; purpose and robots.txt compliance are unverified (third-party reports disagree). Offered only as an opt-in, off-by-default block; never scored.",
+			"source": null,
+			"verified": "2026-11-22",
+			"experimental": true
+		}
+	]
+}

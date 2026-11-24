@@ -1,0 +1,17 @@
+{
+	"admin_path": "/wp-admin/",
+	"ajax_path": "/wp-admin/admin-ajax.php",
+	"private_paths": [
+		"/cart/",
+		"/checkout/",
+		"/my-account/"
+	],
+	"sitemap_url": "{{HOME}}/wp-sitemap.xml",
+	"home_host": "shop.example",
+	"sample_paths": [
+		"/",
+		"/shop/",
+		"/product/sample/"
+	],
+	"note": "AC29"
+}

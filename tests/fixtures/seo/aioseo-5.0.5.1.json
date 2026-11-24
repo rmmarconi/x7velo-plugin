@@ -1,0 +1,13 @@
+{
+    "_meta": {
+        "plugin": "aioseo",
+        "captured": "2026-11-23",
+        "wc": "11.3.1",
+        "wp": "7.1.5",
+        "note": "Raw option values captured from a real install (track E integration env); trimmed to keys the adapters read."
+    },
+    "options": {
+        "aioseo_options": "{\"sitemap\":{\"general\":{\"enable\":true,\"postTypes\":{\"all\":true,\"included\":[\"post\",\"page\",\"attachment\",\"product\"]}},\"llms\":{\"enable\":false}},\"searchAppearance\":{\"global\":{\"schema\":{\"siteRepresents\":\"organization\"}}}}",
+        "aioseo_options_dynamic": "{\"searchAppearance\":{\"postTypes\":{\"product\":{\"advanced\":{\"robotsMeta\":{\"default\":true,\"noindex\":false,\"nofollow\":false,\"noarchive\":false,\"noimageindex\":false,\"notranslate\":false,\"nosnippet\":false,\"noodp\":false,\"maxSnippet\":-1,\"maxVideoPreview\":-1,\"maxImagePreview\":\"large\"}}}}}}"
+    }
+}

@@ -1,0 +1,4 @@
+# x7velo: begin
+User-agent: Google-Extended
+Disallow: /
+# x7velo: end

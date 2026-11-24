@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+Disallow: /cart/
+Disallow: /cart/
+Disallow: /wp-admin/

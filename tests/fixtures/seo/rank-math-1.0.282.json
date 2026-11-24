@@ -1,0 +1,38 @@
+{
+    "_meta": {
+        "plugin": "rank-math",
+        "captured": "2026-11-23",
+        "wc": "11.3.1",
+        "wp": "7.1.5",
+        "note": "Raw option values captured from a real install (track E integration env); trimmed to keys the adapters read."
+    },
+    "options": {
+        "rank_math_modules": [
+            "link-counter",
+            "analytics",
+            "seo-analysis",
+            "sitemap",
+            "rich-snippet",
+            "woocommerce",
+            "buddypress",
+            "bbpress",
+            "acf",
+            "web-stories",
+            "content-ai",
+            "instant-indexing",
+            "ai-visibility"
+        ],
+        "rank-math-options-general": [],
+        "rank-math-options-titles": {
+            "knowledgegraph_type": "company",
+            "pt_product_robots": [
+                "index"
+            ],
+            "pt_product_default_rich_snippet": "product"
+        },
+        "rank-math-options-sitemap": {
+            "pt_product_sitemap": "on"
+        },
+        "rank_math_registration_skip": "1"
+    }
+}

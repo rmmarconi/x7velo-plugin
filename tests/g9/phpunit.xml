@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+	G9 log-hygiene run (QA gate R11). Same suite as phpunit.xml.dist, but PHPUnit does not turn
+	notices, warnings or deprecations into exceptions, so each one reaches the log set by
+	X7VELO_G9_LOG (see tests/bootstrap.php) instead of being swallowed by the audit runner's
+	per-check catch. tests/g9/scan-debug-log.sh decides pass/fail. Run on PHP 8.4 (cell D):
+	X7VELO_G9_LOG=/var/www/html/wp-content/x7velo-g9-phpunit.log vendor/bin/phpunit -c tests/g9/phpunit.xml
+-->
+<phpunit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../vendor/phpunit/phpunit/phpunit.xsd"
+	bootstrap="../bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="false"
+	convertWarningsToExceptions="false"
+	convertDeprecationsToExceptions="false"
+	beStrictAboutTestsThatDoNotTestAnything="true"
+>
+	<testsuites>
+		<testsuite name="x7velo">
+			<directory suffix="Test.php">../</directory>
+		</testsuite>
+	</testsuites>
+	<groups>
+		<exclude>
+			<group>ms-required</group>
+		</exclude>
+	</groups>
+</phpunit>

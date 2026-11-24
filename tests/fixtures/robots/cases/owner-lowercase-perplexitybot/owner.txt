@@ -1,0 +1,5 @@
+user-agent: perplexitybot
+Disallow: /
+
+User-agent: *
+Disallow: /

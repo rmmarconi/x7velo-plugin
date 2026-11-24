@@ -1,0 +1,577 @@
+// AI Readiness admin page. WP admin palette only (design §6.2); interactive colour comes from
+// the admin colour scheme via the components' --wp-admin-theme-color.
+
+$x7velo-text: #1e1e1e;
+$x7velo-muted: #646970; // 5.5:1 on white.
+$x7velo-border: #dcdcde;
+$x7velo-red: #d63638; // red-50, 4.7:1 on white.
+$x7velo-yellow: #996800; // yellow-50, 4.9:1 on white.
+$x7velo-green: #008a20; // green-50, 4.5:1 on white.
+$x7velo-track: #f0f0f1;
+
+.x7velo-admin {
+	max-width: 960px;
+
+	.x7velo-byline {
+		margin-top: 0;
+		color: $x7velo-muted;
+	}
+}
+
+.x7velo-app {
+	color: $x7velo-text;
+
+	h2 {
+		font-size: 1.3em;
+		margin: 0 0 12px;
+	}
+
+	h3 {
+		font-size: 1.1em;
+		margin: 0;
+	}
+
+	.components-notice {
+		margin: 0 0 16px;
+	}
+}
+
+.x7velo-tabs .components-tab-panel__tabs {
+	margin-bottom: 16px;
+	border-bottom: 1px solid $x7velo-border;
+}
+
+// White cards only: status icon colours need a white background for contrast (§4.1).
+.x7velo-card {
+	background: #fff;
+	border: 1px solid $x7velo-border;
+	border-radius: 2px;
+	padding: 16px 20px;
+	margin: 0 0 16px;
+
+	&:focus {
+		outline: 2px solid var(--wp-admin-theme-color, #3858e9);
+		outline-offset: 2px;
+	}
+}
+
+.x7velo-muted {
+	color: $x7velo-muted;
+}
+
+.x7velo-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 8px 0;
+}
+
+// Status: icon colour + text; text stays dark.
+.x7velo-status {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	font-weight: 600;
+	color: $x7velo-text;
+
+	&__icon {
+		flex: none;
+		fill: currentColor;
+	}
+
+	&--fail .x7velo-status__icon {
+		color: $x7velo-red;
+	}
+
+	&--warn .x7velo-status__icon {
+		color: $x7velo-yellow;
+	}
+
+	&--pass .x7velo-status__icon,
+	&--pass.x7velo-status__icon,
+	svg.x7velo-status--pass {
+		color: $x7velo-green;
+		fill: $x7velo-green;
+	}
+
+	&--muted .x7velo-status__icon,
+	svg.x7velo-status--muted {
+		color: $x7velo-muted;
+		fill: $x7velo-muted;
+	}
+}
+
+@media (forced-colors: active) {
+	.x7velo-status__icon,
+	.x7velo-infoline svg {
+		fill: CanvasText !important;
+	}
+}
+
+// Score card.
+.x7velo-score {
+	&__main {
+		display: flex;
+		gap: 24px;
+		align-items: flex-start;
+	}
+
+	&__number {
+		margin: 0;
+		white-space: nowrap;
+	}
+
+	&__value {
+		font-size: 48px;
+		line-height: 1;
+		font-weight: 600;
+		color: $x7velo-text;
+	}
+
+	&__max {
+		font-size: 18px;
+		color: $x7velo-muted;
+	}
+
+	&__band p {
+		margin: 0 0 4px;
+	}
+
+	&__band-label {
+		font-size: 1.2em;
+		font-weight: 600;
+	}
+
+	&__meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 12px 24px;
+
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.x7velo-bar {
+	display: block;
+	height: 8px;
+	background: $x7velo-track;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 12px 0;
+
+	> span {
+		display: block;
+		height: 100%;
+		background: var(--wp-admin-theme-color, #3858e9);
+	}
+
+	&--small {
+		height: 6px;
+		margin: 0;
+	}
+}
+
+.x7velo-running {
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-weight: 600;
+		font-size: 1.1em;
+
+		.components-spinner {
+			margin: 0;
+		}
+	}
+
+	&__privacy {
+		display: flex;
+		gap: 6px;
+		align-items: flex-start;
+
+		svg {
+			flex: none;
+		}
+	}
+}
+
+.x7velo-waiting .components-notice__content {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+// Top fixes.
+.x7velo-top {
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item {
+		padding: 12px 0;
+		border-top: 1px solid $x7velo-border;
+
+		&:first-child {
+			border-top: 0;
+			padding-top: 0;
+		}
+
+		p {
+			margin: 4px 0;
+		}
+	}
+
+	&__status {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px 12px;
+		align-items: center;
+	}
+
+	&__points {
+		color: $x7velo-muted;
+	}
+}
+
+// Category breakdown.
+.x7velo-cats {
+	&__list {
+		margin: 0;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 12em minmax(80px, 1fr) minmax(10em, auto);
+		gap: 12px;
+		align-items: center;
+		margin: 0 0 8px;
+	}
+}
+
+// All checks.
+.x7velo-checks {
+	&__group {
+		scroll-margin-top: 46px;
+	}
+
+	&__group-head {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 4px 12px;
+		margin-bottom: 8px;
+	}
+
+	&__list {
+		margin: 0;
+	}
+}
+
+.x7velo-check {
+	border-top: 1px solid $x7velo-border;
+	margin: 0;
+	padding: 8px 0;
+
+	&__heading {
+		margin: 0;
+		font-size: inherit;
+	}
+
+	&__toggle {
+		display: flex;
+		width: 100%;
+		min-height: 36px;
+		align-items: center;
+		gap: 8px 12px;
+		flex-wrap: wrap;
+		padding: 4px;
+		background: none;
+		border: 0;
+		text-align: left;
+		cursor: pointer;
+		color: $x7velo-text;
+		font: inherit;
+		scroll-margin-top: 46px;
+
+		&:focus-visible {
+			outline: 2px solid var(--wp-admin-theme-color, #3858e9);
+			outline-offset: 1px;
+		}
+
+		.x7velo-status {
+			min-width: 12em;
+		}
+	}
+
+	&__summary {
+		margin: 0 0 0 32px;
+		color: $x7velo-text;
+	}
+
+	&__detail {
+		margin: 8px 0 8px 32px;
+	}
+}
+
+.x7velo-detail {
+	&__section {
+		h5 {
+			font-size: 1em;
+			margin: 12px 0 4px;
+		}
+
+		p,
+		ol {
+			margin-top: 0;
+		}
+	}
+
+	&__technical {
+		color: $x7velo-muted;
+		font-size: 12px;
+	}
+}
+
+.x7velo-examples {
+	margin: 0;
+
+	li {
+		display: flex;
+		justify-content: space-between;
+		gap: 12px;
+		max-width: 600px;
+	}
+
+	&__edit {
+		display: inline-block;
+		min-height: 24px;
+		padding: 2px 4px;
+	}
+}
+
+// Fixes.
+.x7velo-fixer {
+	.components-toggle-control,
+	.components-checkbox-control {
+		margin: 12px 0;
+	}
+}
+
+.x7velo-robots {
+	&__row {
+		border-top: 1px solid $x7velo-border;
+		padding-top: 4px;
+
+		&:first-child {
+			border-top: 0;
+		}
+
+		&--indent {
+			margin-left: 32px;
+		}
+	}
+}
+
+.x7velo-tag {
+	display: inline-block;
+	margin-left: 4px;
+	padding: 0 6px;
+	border: 1px solid $x7velo-text;
+	border-radius: 2px;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+}
+
+.x7velo-infoline {
+	display: flex;
+	gap: 6px;
+	align-items: flex-start;
+
+	svg {
+		flex: none;
+	}
+
+	// The text wraps inside its own column, so the icon never ends up alone on a line (long pt_BR notes).
+	> span {
+		flex: 1 1 0;
+		min-width: 0;
+	}
+}
+
+.x7velo-code {
+	background: $x7velo-track;
+	color: $x7velo-text;
+	padding: 8px 12px;
+	overflow-x: auto;
+	max-width: 100%;
+	white-space: pre;
+
+	&:focus {
+		outline: 2px solid var(--wp-admin-theme-color, #3858e9);
+	}
+
+	// wp-admin styles every <code> as an inline chip (background, padding, margin); inside
+	// this block that made each line its own chip and indented the first one.
+	code {
+		display: block;
+		margin: 0;
+		padding: 0;
+		background: none;
+		font-size: inherit;
+		white-space: inherit;
+	}
+}
+
+.x7velo-copyblock {
+	margin: 8px 0 12px;
+}
+
+.x7velo-feedurl {
+	word-break: break-all;
+}
+
+// Settings.
+.x7velo-settings {
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	legend {
+		font-weight: 600;
+		padding: 0;
+		margin-bottom: 4px;
+	}
+}
+
+.x7velo-indent {
+	margin-left: 28px;
+}
+
+.x7velo-number {
+	display: flex;
+	align-items: flex-end;
+	gap: 8px;
+	max-width: 260px;
+	// Space between the last radio option and the "Number of days" label.
+	margin-top: 16px;
+}
+
+.x7velo-delivery__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+
+	.components-base-control {
+		width: 6em;
+	}
+}
+
+.x7velo-field--invalid input {
+	border-color: $x7velo-red !important;
+	box-shadow: 0 0 0 1px $x7velo-red !important;
+}
+
+.x7velo-field--invalid .components-base-control__help {
+	color: $x7velo-red;
+}
+
+.x7velo-links {
+	display: flex;
+	gap: 16px;
+}
+
+// Modal.
+.x7velo-modal {
+	max-width: 480px;
+
+	&__actions {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 8px;
+		margin-top: 16px;
+	}
+}
+
+.x7velo-snackbars {
+	position: fixed;
+	bottom: 24px;
+	left: 184px;
+	z-index: 100000;
+}
+
+// No-JS fallback is replaced on mount; hide it if both somehow render.
+.x7velo-has-js .x7velo-nojs {
+	display: none;
+}
+
+// < 782 px: mobile admin (design §3.10).
+@media (max-width: 781px) {
+	.x7velo-score__main {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.x7velo-actions .components-button,
+	.x7velo-score__meta .components-button {
+		width: 100%;
+		justify-content: center;
+		min-height: 44px;
+	}
+
+	.x7velo-cats__row {
+		grid-template-columns: 1fr auto;
+
+		.x7velo-bar {
+			grid-column: 1 / -1;
+			order: 3;
+		}
+	}
+
+	.x7velo-check__toggle {
+		.x7velo-status {
+			min-width: 0;
+			flex: 1 1 auto;
+		}
+
+		.x7velo-check__title {
+			flex-basis: 100%;
+			padding-left: 28px;
+		}
+	}
+
+	.x7velo-check__summary,
+	.x7velo-check__detail {
+		margin-left: 0;
+	}
+
+	.x7velo-robots__row--indent {
+		margin-left: 16px;
+	}
+
+	.x7velo-snackbars {
+		left: 16px;
+		right: 16px;
+	}
+}
+
+@media (min-width: 782px) and (max-width: 960px) {
+	.x7velo-snackbars {
+		left: 52px;
+	}
+}
+
+.x7velo-field-errors p {
+	color: $x7velo-red;
+	margin: 4px 0 0;
+}

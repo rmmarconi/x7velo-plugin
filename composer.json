@@ -1,0 +1,60 @@
+{
+	"name": "x7velo/x7velo",
+	"description": "Agent-readiness kit for WooCommerce stores.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"homepage": "https://x7velo.com",
+	"require": {
+		"php": ">=8.1"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"phpunit/phpunit": "^9.6",
+		"wp-coding-standards/wpcs": "^3.1",
+		"wp-phpunit/wp-phpunit": "^6.5",
+		"yoast/phpunit-polyfills": "^2.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"X7velo\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"X7velo\\Tests\\": "tests/"
+		}
+	},
+	"config": {
+		"platform": {
+			"php": "8.1"
+		},
+		"sort-packages": true,
+		"optimize-autoloader": true,
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts": {
+		"lint": "phpcs",
+		"lint:fix": "phpcbf",
+		"test": "phpunit",
+		"test:no-wc": [
+			"@putenv X7VELO_LOAD_WC=no",
+			"phpunit"
+		],
+		"test:multisite": [
+			"@putenv WP_MULTISITE=1",
+			"phpunit --group multisite --exclude-group ms-excluded"
+		],
+		"test:g9": "phpunit -c tests/g9/phpunit.xml"
+	},
+	"scripts-descriptions": {
+		"lint": "Run PHPCS (WordPress + PHPCompatibilityWP) using phpcs.xml.dist.",
+		"lint:fix": "Auto-fix PHPCS violations with phpcbf.",
+		"test": "Run PHPUnit against the WordPress test suite (use inside wp-env tests-cli).",
+		"test:no-wc": "Run PHPUnit without WooCommerce loaded (covers the 'WooCommerce missing' paths).",
+		"test:multisite": "Run the multisite group (activation, uninstall, network deactivation) on a multisite install.",
+		"test:g9": "Run PHPUnit without converting notices to exceptions; set X7VELO_G9_LOG and scan it with tests/g9/scan-debug-log.sh."
+	}
+}

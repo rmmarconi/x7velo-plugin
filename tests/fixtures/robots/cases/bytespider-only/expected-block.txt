@@ -1,0 +1,4 @@
+# x7velo: begin
+User-agent: Bytespider
+Disallow: /
+# x7velo: end

@@ -1,0 +1,28 @@
+{
+    "_meta": {
+        "plugin": "yoast",
+        "captured": "2026-11-23",
+        "wc": "11.3.1",
+        "wp": "7.1.5",
+        "note": "Raw option values captured from a real install (track E integration env); trimmed to keys the adapters read."
+    },
+    "options": {
+        "wpseo": {
+            "enable_xml_sitemap": true,
+            "deny_search_crawling": false,
+            "deny_wp_json_crawling": false,
+            "deny_adsbot_crawling": false,
+            "enable_llms_txt": false,
+            "enable_schema": true
+        },
+        "wpseo_titles": {
+            "company_logo": "",
+            "company_logo_id": 0,
+            "company_name": "",
+            "company_or_person": "company",
+            "company_or_person_user_id": false,
+            "noindex-product": false
+        },
+        "wpseo_llms_txt_content_hash": ""
+    }
+}

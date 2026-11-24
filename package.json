@@ -1,0 +1,44 @@
+{
+	"name": "x7velo-admin",
+	"version": "1.0.0",
+	"private": true,
+	"description": "x7velo WP-admin dashboard (AI Readiness).",
+	"license": "GPL-2.0-or-later",
+	"engines": {
+		"node": ">=24 <25"
+	},
+	"scripts": {
+		"build": "wp-scripts build assets/src/index.js --output-path=build",
+		"start": "wp-scripts start assets/src/index.js --output-path=build",
+		"lint:js": "wp-scripts lint-js assets/src",
+		"test:unit": "wp-scripts test-unit-jest --config jest.config.js"
+	},
+	"dependencies": {
+		"@wordpress/a11y": "5.2.0",
+		"@wordpress/api-fetch": "8.2.0",
+		"@wordpress/components": "45.0.0",
+		"@wordpress/compose": "9.2.0",
+		"@wordpress/date": "6.2.0",
+		"@wordpress/element": "10.2.0",
+		"@wordpress/i18n": "7.2.0",
+		"@wordpress/icons": "21.0.0",
+		"@wordpress/url": "5.2.0"
+	},
+	"devDependencies": {
+		"@axe-core/playwright": "4.14.0",
+		"@babel/core": "7.29.13",
+		"@playwright/test": "1.65.1",
+		"@testing-library/jest-dom": "8.0.0",
+		"@testing-library/react": "16.3.3",
+		"@testing-library/user-event": "14.6.13",
+		"@wordpress/babel-preset-default": "10.2.0",
+		"@wordpress/dependency-extraction-webpack-plugin": "7.2.0",
+		"@wordpress/eslint-plugin": "28.2.0",
+		"@wordpress/jest-preset-default": "14.2.0",
+		"@wordpress/scripts": "37.2.0",
+		"babel-jest": "30.5.0",
+		"eslint-plugin-jest": "29.17.1",
+		"jest": "30.5.0",
+		"jest-environment-jsdom": "30.5.0"
+	}
+}

@@ -1,0 +1,10 @@
+.phpunit.result.cache
+.phpcs-cache
+
+# Public repo (appended by infra/scripts/plugin-public-snapshot.sh)
+/vendor/
+/node_modules/
+/build/
+/dist/
+/.wp-env.override.json
+*.zip

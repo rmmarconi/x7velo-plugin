@@ -1,0 +1,39 @@
+{
+    "_meta": {
+        "plugin": "seopress",
+        "captured": "2026-11-23",
+        "wc": "11.3.1",
+        "wp": "7.1.5",
+        "note": "Raw option values captured from a real install (track E integration env); trimmed to keys the adapters read."
+    },
+    "options": {
+        "seopress_toggle": {
+            "toggle-xml-sitemap": "1",
+            "toggle-social": "1",
+            "toggle-llms": "1"
+        },
+        "seopress_xml_sitemap_option_name": {
+            "seopress_xml_sitemap_general_enable": "1",
+            "seopress_xml_sitemap_post_types_list": {
+                "post": {
+                    "include": "1"
+                },
+                "page": {
+                    "include": "1"
+                },
+                "product": {
+                    "include": "1"
+                }
+            }
+        },
+        "seopress_titles_option_name": {
+            "seopress_titles_single_titles": {
+                "product": {
+                    "title": "%%post_title%% %%sep%% %%sitetitle%%",
+                    "description": "%%post_excerpt%%"
+                }
+            }
+        },
+        "seopress_social_option_name": []
+    }
+}

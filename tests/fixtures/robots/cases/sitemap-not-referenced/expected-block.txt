@@ -1,0 +1,3 @@
+# x7velo: begin
+Sitemap: {{HOME}}/wp-sitemap.xml
+# x7velo: end
